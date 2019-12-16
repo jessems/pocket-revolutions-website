@@ -36,7 +36,7 @@ const Hero = () => {
             max-width: ${rhythm(15)};
           `}
         >
-          Successful digital products
+          Portfolio
         </h1>
       </Container>
       <div
@@ -116,7 +116,7 @@ export const pageQuery = graphql`
       }
     }
     allMdx(
-      limit: 3
+      limit: 5
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { published: { ne: false } } }
     ) {
