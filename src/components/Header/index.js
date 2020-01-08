@@ -25,11 +25,14 @@ const Header = ({ siteTitle }) => {
           css={css`
             width: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            ${bpMaxSM} {
+              justify-content: space-between;
+            }
             align-items: center;
           `}
         >
-          <Link
+          {/* <Link
             to="/"
             aria-label="go to homepage"
             css={css`
@@ -41,7 +44,7 @@ const Header = ({ siteTitle }) => {
             `}
           >
             {siteTitle}
-          </Link>
+          </Link> */}
           <div
             css={css`
               font-size: 16px;
@@ -63,7 +66,9 @@ const Header = ({ siteTitle }) => {
             <div
               css={css`
                 display: flex;
+                width: 100%;
                 align-items: center;
+                
                 ${bpMaxSM} {
                   display: none;
                 }

@@ -33,7 +33,8 @@ const Hero = () => {
       >
         <div css={css`
           color: rgba(255, 255, 255, 0.5);
-        `}>Digital products done right</div>
+          max-width: ${rhythm(15)};
+        `}>Product design & development consultancy</div>
         <h1
           css={css`
             color: ${theme.colors.white};
@@ -45,7 +46,7 @@ const Hero = () => {
             max-width: ${rhythm(15)};
           `}
         >
-          Your users will love what you build next
+          Helping you build apps that make an impact
         </h1>
       </Container>
       <div
@@ -77,6 +78,16 @@ export default function Index({ data: { site, allMdx } }) {
         <h1 css={css`
           font-size: 30px;
           font-weight: 300;
+          display: inline-block;
+          &:after {
+            content: ""; 
+            display: block; 
+            float: left;
+            margin: 0 auto;
+            width: 50%; 
+            padding-top: 8px; 
+            border-bottom: 3px solid #C7017F; 
+        }
         `}> Portfolio </h1>
         <PortfolioCard 
           title="Replacing customer support with a package-tracker-style status app" 
@@ -86,17 +97,26 @@ export default function Index({ data: { site, allMdx } }) {
           formFactor="Mobile App"
           userType="Business to Client"
           tags={['Product Design', 'Product Development', 'Other']}
+          borderColor="rgba(13, 94, 33, 0.05);"
+          backgroundColor="#F7FCF7"
+          titleColor="#0E6123"
+          moreLinkColor="#648D6E"
           />
           <PortfolioCard 
           title="Digitalising an age-old cold testing method" 
           appName="Pingcoin"
-          description="Axova AG wanted to reduce the amount of support phone calls that were coming into the office. We created an app that functions as a packet tracker for the solar installation process."
-          industry="Energy Sector"
+          description="Many experienced coin collectors are able to strike a coin to make it emit a sound and determine if the coin is authentic or not.
+          By digitalising this process, Pingcoin  enhances the accuracy of the method and brings its ability to anyone with a smartphone."
+          industry="Numismatics"
           formFactor="Mobile App"
           userType="Business to Consumer"
           tags={['Product Design', 'Product Development', 'Other']}
+          borderColor="#F3E6FB"
+          backgroundColor="#F8F5FA"
+          titleColor="#493289"
+          moreLinkColor="#726A8B"
           />
-        {allMdx.edges
+        {/* {allMdx.edges
           .filter(obj => {
             console.log(obj.node)
             return obj.node.frontmatter.contentType === 'portfolioPiece' ? obj : null
@@ -136,7 +156,44 @@ export default function Index({ data: { site, allMdx } }) {
               </Link>
             </Description>
           </div>
-        ))}
+        ))} */}
+        
+        {/* <Link to="/blog" aria-label="Visit blog page">
+          View all articles
+        </Link> */}
+        <hr />
+        <h1>What we do</h1>
+        <p>If you want to build an app, you typically have several options. If you've got an in-house team you can develop the app internally. If you don't, you can work with an external agency.</p>
+        
+        <p>We are primarily interested in helping you achieve your business outcomes. If software is the right tool for that, then by all means, let's build it.
+        But sometimes software isn't the right tool. </p>
+
+        <p>Apps can be wonderful, sexy and even life-changing. Who doesn't rely on the magic of an app like Google Maps these days.</p>
+
+        <p>But software development is a risky endeavour for any business.</p>
+
+        <p>
+        <ul>
+              <li>There is the financial risk involved in financing the development of the application –– a price tag that often remains unknown until late in the project.</li>
+              <li>There is the market risk for B2C and B2B apps –– whether or not they will get traction and prove valuable to users</li>
+              <li>There are business risks –– whether the app will be able to sustain itself</li>
+              <li> There are technical risks -- </li>
+              <li>There are usability risks</li>
+        </ul>
+        
+        
+       
+        </p>
+        
+        <p>It should come as not suprise that to successfully navigate these risks you need a partner that understands these domains.</p>
+
+
+
+
+        <h1>Our Services</h1>
+        Bla
+        <h1>Our Partners</h1>
+        Bla
         <h1> Posts </h1>
         {allMdx.edges.map(({ node: post }) => (
           <div
@@ -172,16 +229,6 @@ export default function Index({ data: { site, allMdx } }) {
             </Description>
           </div>
         ))}
-        <Link to="/blog" aria-label="Visit blog page">
-          View all articles
-        </Link>
-        <hr />
-        <h1>Digital Revolutions as a Service </h1>
-        Bla
-        <h1>Our Services</h1>
-        Bla
-        <h1>Our Partners</h1>
-        Bla
       </Container>
     </Layout>
   )

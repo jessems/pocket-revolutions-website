@@ -18,7 +18,9 @@ class PortfolioCard extends Component {
         css={css`
           width: 960px;
           margin: 64px auto;
-          background: #D3F6DC;
+          border: 1px solid ${this.props.borderColor};
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+          background: ${this.props.backgroundColor};
           border-radius: 20px;
           padding: 20px;
           padding-top: 64px;
@@ -37,7 +39,7 @@ class PortfolioCard extends Component {
             css={css`
               font-size: 24px;
               font-weight: 500;
-              color: #0e6123;
+              color: ${this.props.titleColor};
               margin: 0;
               line-height: 28px;
             `}
@@ -65,7 +67,22 @@ class PortfolioCard extends Component {
             {this.props.description}
           </p>
           <div>
-            <Link to="/axova">Full case study</Link>
+            <Link
+              to="/axova"
+              css={css`
+                font-weight: bold;
+                color: ${this.props.moreLinkColor};
+                border-bottom: solid 2px ${this.props.moreLinkColor};
+                text-decoration: none;
+                &:hover {
+                  text-decoration: none;
+                  color: #c7017f;
+                  border-bottom: solid 2px #c7017f;
+                }
+              `}
+            >
+              Full case study
+            </Link>
           </div>
         </div>
         <div
