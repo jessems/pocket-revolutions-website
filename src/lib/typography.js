@@ -1,14 +1,31 @@
 import Typography from 'typography'
+// import WebFont from 'webfontloader';
 import '../fonts/fonts.css'
 
+// WebFont.load({
+//   google: {
+//     families: ['Ubuntu: 300,400,700', 'sans-serif']
+//   }
+// });
+
 export const fonts = {
-  regular: 'Inter UI Regular',
-  regularItalic: 'Inter UI Regular Italic',
-  semibold: 'Inter UI Semibold',
-  semiboldItalic: 'Inter UI Semibold Italic',
-  bold: 'Inter UI Bold',
-  boldItalic: 'Inter UI Bold Italic',
+  regular: 'Ubuntu',
+  regularItalic: 'Ubuntu',
+  semibold: 'Ubuntu',
+  semiboldItalic: 'Ubuntu',
+  bold: 'Ubuntu',
+  boldItalic: 'Ubuntu',
 }
+
+
+// export const fonts = {
+//   regular: 'Inter UI Regular',
+//   regularItalic: 'Inter UI Regular Italic',
+//   semibold: 'Inter UI Semibold',
+//   semiboldItalic: 'Inter UI Semibold Italic',
+//   bold: 'Inter UI Bold',
+//   boldItalic: 'Inter UI Bold Italic',
+// }
 
 const typography = new Typography({
   baseFontSize: '18px',

@@ -200,7 +200,20 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       name: 'isPost',
       node,
-      value: true
+      value: node.frontmatter.contentType === 'post' ? true : false
+      // value: true
+    })
+
+    createNodeField({
+      name: 'bla',
+      node,
+      value: node.frontmatter.title,
+    })
+
+    createNodeField({
+      name: 'contentType',
+      node,
+      value: node.frontmatter.contentType
     })
   }
 }

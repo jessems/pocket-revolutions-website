@@ -37,7 +37,7 @@ const Hero = () => {
             max-width: ${rhythm(15)};
           `}
         >
-          Portfolio
+          Axova
         </h1>
       </Container>
       <div
@@ -65,10 +65,7 @@ export default function Index({ data: { site, allMdx } }) {
           padding-bottom: 0;
         `}
       >
-        <div>
-          <Link to="/axova">Full case study</Link>
-        </div>
-        
+   Let's just do this all manually.
       </Container>
     </Layout>
   )

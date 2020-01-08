@@ -5,7 +5,6 @@ import { useTheme } from '../Theming'
 import { bpMaxSM } from '../../lib/breakpoints'
 import MobileMenu from './MobileMenu'
 import Links from './Links'
-
 import Container from '../Container'
 
 const Header = ({ siteTitle }) => {
@@ -17,7 +16,8 @@ const Header = ({ siteTitle }) => {
         flex-shrink: 0;
         background: none;
         padding: 20px 0;
-        background: ${theme.colors.headerBg};
+        // background: ${theme.colors.headerBg};
+        background-image: linear-gradient(to right, #C7017F, #153D8A)
       `}
     >
       <Container noVerticalPadding>

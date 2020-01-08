@@ -26,11 +26,11 @@ export default () => {
         Contact
       </Link>
 
-      <ThemeToggler
+      {/* <ThemeToggler
         css={{}}
         toggleTheme={theme.toggleTheme}
         themeName={theme.themeName}
-      />
+      /> */}
     </React.Fragment>
   )
 }

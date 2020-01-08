@@ -5,6 +5,7 @@ title: 'Pingcoin'
 description: 'Ut elementum urna quis ex porta, eu porta ante porta. Curabitur a lectus fringilla, condimentum sem eu, efficitur ligula.'
 published: true
 banner: './banner.png'
+contentType: 'portfolioPiece'
 ---
 
 Pingcoin is a digitalisation effort of the age-old ping test.
