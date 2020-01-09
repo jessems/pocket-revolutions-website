@@ -7,6 +7,7 @@ import Link from 'components/Link'
 import { useTheme } from 'components/Theming'
 import Container from 'components/Container'
 import PortfolioCard from 'components/PortfolioCard'
+import Title from 'components/Title'
 import { rhythm } from '../lib/typography'
 
 const Hero = () => {
@@ -16,7 +17,7 @@ const Hero = () => {
       css={css`
         color: ${theme.colors.white};
         width: 100%;
-        min-height: 300px;
+        min-height: 360px;
         // background: ${theme.colors.primary};
         background-image: linear-gradient(to right, #C7017F, #153D8A);
         padding: 20px 0 30px 0;
@@ -75,20 +76,8 @@ export default function Index({ data: { site, allMdx } }) {
         `}
       >
         
-        <h1 css={css`
-          font-size: 30px;
-          font-weight: 300;
-          display: inline-block;
-          &:after {
-            content: ""; 
-            display: block; 
-            float: left;
-            margin: 0 auto;
-            width: 50%; 
-            padding-top: 8px; 
-            border-bottom: 3px solid #C7017F; 
-        }
-        `}> Portfolio </h1>
+
+        <Title text="Portfolio" />
         <PortfolioCard 
           title="Replacing customer support with a package-tracker-style status app" 
           appName="My Axova"
@@ -162,7 +151,7 @@ export default function Index({ data: { site, allMdx } }) {
           View all articles
         </Link> */}
         <hr />
-        <h1>What we do</h1>
+        <Title text="What we do" />
         <p>If you want to build an app, you typically have several options. If you've got an in-house team you can develop the app internally. If you don't, you can work with an external agency.</p>
         
         <p>We are primarily interested in helping you achieve your business outcomes. If software is the right tool for that, then by all means, let's build it.
@@ -190,7 +179,7 @@ export default function Index({ data: { site, allMdx } }) {
 
 
 
-        <h1>Our Services</h1>
+        <Title text="Our Services" />
         Bla
         <h1>Our Partners</h1>
         Bla

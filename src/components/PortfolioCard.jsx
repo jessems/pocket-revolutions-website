@@ -17,7 +17,9 @@ class PortfolioCard extends Component {
       <div
         css={css`
           width: 960px;
-          margin: 64px auto;
+          margin-bottom: 64px;
+          margin-right: auto;
+          margin-left: auto;
           border: 1px solid ${this.props.borderColor};
           box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
           background: ${this.props.backgroundColor};

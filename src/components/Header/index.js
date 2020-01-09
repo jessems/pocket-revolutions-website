@@ -50,12 +50,11 @@ const Header = ({ siteTitle }) => {
               font-size: 16px;
               line-height: 1.25;
               display: flex;
-              align-items: center;
+              width: 100%;
+              align-items: space-between;
               a {
                 text-decoration: none;
                 color: ${theme.colors.white};
-                margin-left: 16px;
-                margin-right: 16px;
               }
               .active {
                 // display: none;
@@ -68,6 +67,7 @@ const Header = ({ siteTitle }) => {
                 display: flex;
                 width: 100%;
                 align-items: center;
+                justify-content: space-between;
                 
                 ${bpMaxSM} {
                   display: none;

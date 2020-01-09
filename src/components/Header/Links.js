@@ -1,24 +1,30 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { css } from '@emotion/core'
+import styled, { css } from 'styled-components'
 import { useTheme } from '../Theming'
 import ThemeToggler from './ThemeToggler'
 import PocketRevolutionsLogo from '../assets/PocketRevolutions_NEG.svg'
 
 export default () => {
   const theme = useTheme()
+  // const StyledLinked = styled(props => <Link {...props} />)`
+  //   opacity: 0.9;
+  // `
+  const StyledLink = styled(Link)`
+    opacity: 0.9;
+  `
   return (
     <React.Fragment>
-      <Link to="/services" activeClassName="active" aria-label="View blog page">
+      <StyledLink to="/services" activeClassName="active" aria-label="View blog page" css={css`margin-left: 0; margin-right: 16px;`}>
         Services
-      </Link>
-      <Link to="/portfolio" activeClassName="active" aria-label="View blog page">
+      </StyledLink>
+      <StyledLink to="/portfolio" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
         Portfolio
-      </Link>
-      <Link to="/methods" activeClassName="active" aria-label="View blog page">
+      </StyledLink>
+      <StyledLink to="/methods" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
         Methods
-      </Link>
-      <Link to="/" aria-label="Home">
+      </StyledLink>
+      <StyledLink to="/" aria-label="Home">
         <PocketRevolutionsLogo css={css`
         width: 144px;
         & path {
@@ -27,22 +33,22 @@ export default () => {
         & polygon {
           fill: #EC96DC!important; 
         }
-        & rect {
+        & rect.cls-2 {
           fill: #EC96DC!important; 
         }
         margin-left: 32px; 
         margin-right: 32px
         `}/>
-      </Link> 
-      <Link to="/learn" activeClassName="active" aria-label="View blog page">
+      </StyledLink> 
+      <StyledLink to="/learn" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
         Learn
-      </Link>
-      <Link to="/about" activeClassName="active" aria-label="View blog page">
+      </StyledLink>
+      <StyledLink to="/about" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
         About
-      </Link>
-      <Link to="/contact" activeClassName="active" aria-label="View blog page">
+      </StyledLink>
+      <StyledLink to="/contact" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
         Contact
-      </Link>
+      </StyledLink>
 
       {/* <ThemeToggler
         css={{}}
