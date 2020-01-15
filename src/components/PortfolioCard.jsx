@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-import { css } from '@emotion/core'
-import iphone from './iphone.png'
+import styled, { css } from 'styled-components'
+import axovaDisplay from './axova_display.png'
+import pingcoinDisplay from './pingcoin_display.png'
 import IndustryIcon from './assets/business-24px.svg'
 import FormFactorIcon from './assets/phonelink-24px.svg'
 import UserTypeIcon from './assets/supervised_user_circle-24px.svg'
@@ -13,6 +14,10 @@ class PortfolioCard extends Component {
     Other: 'brown',
   }
   render() {
+    let images = {
+      axova: axovaDisplay,
+      pingcoin: pingcoinDisplay,
+    }
     return (
       <div
         css={css`
@@ -27,6 +32,7 @@ class PortfolioCard extends Component {
           padding: 20px;
           padding-top: 64px;
           padding-left: 64px;
+          padding-bottom: 64px;
           display: flex;
           flex-direction: row;
           }
@@ -56,7 +62,7 @@ class PortfolioCard extends Component {
               color: #969696;
             `}
           >
-            My Axova
+            {this.props.appName}
           </span>
           <p
             css={css`
@@ -193,16 +199,19 @@ class PortfolioCard extends Component {
           <div
             css={css`
               display: flex;
-              flex-direction: row;
-              justify-content: space-between;
+              height: 100%;
+              flex-direction: column;
+              justify-content: center;
+              // align-items: center;
             `}
           >
             <img
-              src={iphone}
+              src={images[this.props.imageName]}
               css={css`
-                margin-left: 20px;
-                margin-right: -20px;
-                width: 250px;
+                margin-left: 40px;
+                margin-right: -40px;
+                width: 600px;
+                transform: scale(2.5);
               `}
             />
           </div>

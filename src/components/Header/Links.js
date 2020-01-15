@@ -11,7 +11,52 @@ export default () => {
   //   opacity: 0.9;
   // `
   const StyledLink = styled(Link)`
+  // $red: #F37272;
+  // $brown: #584E4A;
+  // $whitey: #f0f0f0;
+
+  // $duration: .2s;
+  // $distance: 8px;
+  // $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+
     opacity: 0.9;
+    position: relative;
+    padding-bottom: 8px;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        bottom: 2px;
+        left: 0; right: 0;
+        height: 2px;
+        background-color: #EC96DC;
+    }
+    &:before {
+        opacity: 0;
+        transform: translateY(-8px);
+        transition: transform 0s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0s;
+    }
+    &:after {
+        opacity: 0;
+        transform: translateY(8px/2);
+        transition: transform .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity .2s;
+    }
+    &:hover,
+    &:focus {
+        color: #EC96DC;
+        &:before,
+        &:after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        &:before {
+            transition: transform .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity .2s;
+        }
+        &:after {
+            transition: transform 0s .2s cubic-bezier(0.175, 0.885, 0.320, 1.275), opacity 0s .2s;
+        }
+    }
   `
   return (
     <React.Fragment>
@@ -24,7 +69,7 @@ export default () => {
       <StyledLink to="/methods" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
         Methods
       </StyledLink>
-      <StyledLink to="/" aria-label="Home">
+      <Link to="/" aria-label="Home">
         <PocketRevolutionsLogo css={css`
         width: 144px;
         & path {
@@ -39,7 +84,7 @@ export default () => {
         margin-left: 32px; 
         margin-right: 32px
         `}/>
-      </StyledLink> 
+      </Link> 
       <StyledLink to="/learn" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
         Learn
       </StyledLink>
