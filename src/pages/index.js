@@ -12,6 +12,7 @@ import Title from 'components/Title'
 import { rhythm } from '../lib/typography'
 import AxovaBackground from 'components/axova-background.svg'
 import PingcoinBackground from 'components/pingcoin-background.svg'
+import HeroImage from 'components/hero-image.png';
 
 
 const Hero = () => {
@@ -31,36 +32,49 @@ const Hero = () => {
     >
       <Container
         css={css`
-          display: flex;
-          flex-direction: column;
+
           
         `}
       >
 
-        <h1
-          css={css`
-            color: ${theme.colors.white};
-            font-weight: 500;
-            position: relative;
-            z-index: 5;
-            line-height: 1.5;
-            margin: 0;
-            max-width: ${rhythm(15)};
-          `}
-        >
-          From idea to app
-        </h1>
-        <h2 css={css`
-            color: ${theme.colors.white};
-            font-weight: 300;
-            position: relative;
-            z-index: 5;
-            line-height: 1.5;
-            margin: 0;
-            max-width: ${rhythm(15)};
+        <div css={css`
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;   
+        `}>
+          <div>
+
+            <h1
+              css={css`
+                color: ${theme.colors.white};
+                font-weight: 500;
+                position: relative;
+                z-index: 5;
+                line-height: 1.5;
+                margin: 0;
+                max-width: ${rhythm(15)};
+              `}
+            >
+              From idea to app
+            </h1>
+            <h2 css={css`
+                color: ${theme.colors.white};
+                font-weight: 300;
+                position: relative;
+                z-index: 5;
+                line-height: 1.5;
+                margin: 0;
+                max-width: ${rhythm(15)};
+              `}>
+            Helping you achieve the impact you were dreaming of
+            </h2>
+          </div>
+          <div css={css`
+          flex: 0.9;
           `}>
-        Helping you achieve the impact you were dreaming of
-        </h2>
+            <img src={HeroImage} css={css`margin-top: -64px;`}/>
+          </div>
+        </div>
       </Container>
       <div
         css={css`
