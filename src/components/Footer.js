@@ -6,7 +6,9 @@ import { Twitter, GitHub } from './Social'
 import Container from './Container'
 
 const Footer = ({ author, noSubscribeForm }) => (
-  <footer>
+  <footer css={css`
+    background: #F8F4F9;
+  `}>
     <Container
       css={css`
         padding-top: 0;
