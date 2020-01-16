@@ -28,6 +28,8 @@ class PortfolioCard extends Component {
           border: 1px solid ${this.props.borderColor};
           box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
           background: ${this.props.backgroundColor};
+          background-size: contain;
+          background-image: ${this.props.backgroundUrl};
           border-radius: 20px;
           padding: 20px;
           padding-top: 64px;

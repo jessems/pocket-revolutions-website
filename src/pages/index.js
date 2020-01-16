@@ -10,6 +10,8 @@ import PortfolioCard from 'components/PortfolioCard'
 import ServiceGrid from 'components/ServiceGrid'
 import Title from 'components/Title'
 import { rhythm } from '../lib/typography'
+import AxovaBackground from 'components/axova-background.svg'
+import PingcoinBackground from 'components/pingcoin-background.svg'
 
 
 const Hero = () => {
@@ -197,6 +199,10 @@ const SubHeading = styled.h2`
 
 export default function Index({ data: { site, allMdx } }) {
   const theme = useTheme()
+  let backgroundMapping = {
+    axova: `url(${AxovaBackground})`,
+    pingcoin: `url(${PingcoinBackground})`
+  }
   return (
     <Layout site={site}>
       <Hero />
@@ -221,6 +227,7 @@ export default function Index({ data: { site, allMdx } }) {
           titleColor="#0E6123"
           moreLinkColor="#648D6E"
           imageName="axova"
+          backgroundUrl={backgroundMapping['axova']}
           />
           <PortfolioCard 
           title="Digitalising the ping test –– an age-old method of catching counterfeit coins" 
@@ -236,6 +243,7 @@ export default function Index({ data: { site, allMdx } }) {
           titleColor="#493289"
           moreLinkColor="#726A8B"
           imageName="pingcoin"
+          backgroundUrl={backgroundMapping['pingcoin']}
           />
       
         

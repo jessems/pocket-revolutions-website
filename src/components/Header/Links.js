@@ -11,14 +11,6 @@ export default () => {
   //   opacity: 0.9;
   // `
   const StyledLink = styled(Link)`
-  // $red: #F37272;
-  // $brown: #584E4A;
-  // $whitey: #f0f0f0;
-
-  // $duration: .2s;
-  // $distance: 8px;
-  // $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
-
     opacity: 0.9;
     position: relative;
     padding-bottom: 8px;
@@ -45,6 +37,7 @@ export default () => {
     &:hover,
     &:focus {
         color: #EC96DC;
+        text-decoration: none!important;
         &:before,
         &:after {
             opacity: 1;
