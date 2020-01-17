@@ -16,7 +16,6 @@ const Header = ({ siteTitle }) => {
         flex-shrink: 0;
         background: none;
         padding: 20px 0;
-        // background: ${theme.colors.headerBg};
         background-image: linear-gradient(to right, #C7017F, #153D8A)
       `}
     >
@@ -32,19 +31,6 @@ const Header = ({ siteTitle }) => {
             align-items: center;
           `}
         >
-          {/* <Link
-            to="/"
-            aria-label="go to homepage"
-            css={css`
-              color: white;
-              &:hover {
-                color: white;
-                text-decoration: none;
-              }
-            `}
-          >
-            {siteTitle}
-          </Link> */}
           <div
             css={css`
               font-size: 16px;
