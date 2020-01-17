@@ -127,10 +127,10 @@ class ContactUs extends React.Component {
               </Col>
               <Col css={css`min-height: 350px;`}>{!submitted ? (
                 <form name="contact" onSubmit={this.handleSubmit}>
-                  <Input type="text" placeholder="Your name" name="name" value={name} onChange={this.handleChange}/>
-                  <Input type="text" placeholder="Company name" name="company" value={company} onChange={this.handleChange}/>
+                  <Input type="text" name="name" placeholder="Your name"  value={name} onChange={this.handleChange}/>
+                  <Input type="text" name="company" placeholder="Company name" value={company} onChange={this.handleChange}/>
                   <Select name="budget" value={budget} onChange={this.handleChange}>
-                    <option value="" disabled selected hidden>Select your budget</option>
+                    <option value="" disabled hidden>Select your budget</option>
                     <option value="10k20k">CHF 10'000 –– CHF 20'000</option>
                     <option value="20k50k">CHF 20'001 –– CHF 50'000</option>
                     <option value="50k100k">CHF 50'001 –– CHF 100'000</option>
@@ -138,7 +138,7 @@ class ContactUs extends React.Component {
                     <option value="200k500k">CHF 200'001 –– CHF 500'000</option>
                     <option value="500kplus">Over CHF 500'001</option>
                   </Select>
-                  <Input type="text" placeholder="Email" name="email" value={email} onChange={this.handleChange}/>
+                  <Input type="text" name="email" placeholder="Email" value={email} onChange={this.handleChange}/>
                   <Submit type="submit">SEND</Submit>
                 </form>
                 ) : (
