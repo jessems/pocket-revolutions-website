@@ -72,7 +72,7 @@ class ContactUs extends React.Component {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...this.state })
+            body: encode({ "form-name": "contactUs", ...this.state })
         })
             .then(() => {
                 alert(JSON.stringify(this.state));
@@ -143,7 +143,7 @@ class ContactUs extends React.Component {
                 </div>
               </Col>
               <Col css={css`min-height: 350px;`}>{!submitted ? (
-                 <form onSubmit={this.handleSubmit}>
+                 <form name="contactUs" onSubmit={this.handleSubmit}>
                   <Input type="text" name="name" value={name} onChange={this.handleChange} />
                   <Input type="text" name="company" value={company} onChange={this.handleChange} />
                   <Select name="budget" value={budget} onChange={this.handleChange}>
