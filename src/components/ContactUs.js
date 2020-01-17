@@ -127,8 +127,7 @@ class ContactUs extends React.Component {
               </Col>
               <Col css={css`min-height: 350px;`}>{!submitted ? (
                 <form name="contact" onSubmit={this.handleSubmit}>
-                    <input type="hidden" name="form-name" value="contact" />
-                  <Input name="name" type="text" placeholder="Your name"  value={name} onChange={this.handleChange}/>
+                  <input name="name" type="text" placeholder="Your name"  value={name} onChange={this.handleChange}/>
                   <Input name="company" type="text" placeholder="Company name" value={company} onChange={this.handleChange}/>
                   <Select name="budget" value={budget} onChange={this.handleChange}>
                     <option value="" disabled hidden>Select your budget</option>
