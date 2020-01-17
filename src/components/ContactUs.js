@@ -60,8 +60,8 @@ class ContactUs extends React.Component {
     constructor(props) {
         super(props);
         this.state = { name: "", company: "", budget: "", email: "", submitted: false};
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
       }
 
     handleSubmit = e => {
@@ -126,9 +126,9 @@ class ContactUs extends React.Component {
                 </div>
               </Col>
               <Col css={css`min-height: 350px;`}>{!submitted ? (
-                <form name="contact" onSubmit={this.handleSubmit}>
-                  <input name="name" type="text" placeholder="Your name"  value={name} onChange={this.handleChange}/>
-                  <Input name="company" type="text" placeholder="Company name" value={company} onChange={this.handleChange}/>
+                 <form onSubmit={this.handleSubmit}>
+                  <Input type="text" name="name" value={name} onChange={this.handleChange} />
+                  <Input type="text" name="company" value={company} onChange={this.handleChange} />
                   <Select name="budget" value={budget} onChange={this.handleChange}>
                     <option value="" disabled hidden>Select your budget</option>
                     <option value="10k20k">CHF 10'000 –– CHF 20'000</option>
@@ -138,7 +138,7 @@ class ContactUs extends React.Component {
                     <option value="200k500k">CHF 200'001 –– CHF 500'000</option>
                     <option value="500kplus">Over CHF 500'001</option>
                   </Select>
-                  <Input name="email" type="text" placeholder="Email" value={email} onChange={this.handleChange}/>
+                  <Input type="email" name="email" value={email} onChange={this.handleChange} />
                   <Submit type="submit">SEND</Submit>
                 </form>
                 ) : (
