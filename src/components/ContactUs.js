@@ -59,10 +59,10 @@ const Select = styled.select`
 class ContactUs extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { name: "", company: "", email: ""};
+        this.state = { name: "", company: "", budget: "", email: "", submitted: false};
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
       }
-
-
 
     handleSubmit = e => {
         fetch("/", {
@@ -70,17 +70,20 @@ class ContactUs extends React.Component {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": "contact", ...this.state })
         })
-            .then(() => alert(JSON.stringify(this.state)))
+            .then(() => {
+                // Success!
+            })
             .catch(error => alert(error));
 
         e.preventDefault();
+        this.setState({submitted: true});
     };
 
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
     
     render() {
 
-        const { name, company, budget, email } = this.state;
+        const { name, company, budget, email, submitted } = this.state;
 
         return (
       <section css={css`
@@ -99,7 +102,6 @@ class ContactUs extends React.Component {
             <Row>
               <Col>
                 <div css={css`
-                  min-height: 100px;
                 `}>
                   <span css={css`
                     text-transform: uppercase;
@@ -123,7 +125,7 @@ class ContactUs extends React.Component {
                   `}>Get in touch with us here and we wil surely get back to you.</p>
                 </div>
               </Col>
-              <Col>
+              <Col css={css`min-height: 350px;`}>{!submitted ? (
                 <form name="contact" onSubmit={this.handleSubmit}>
                   <Input type="text" placeholder="Your name" name="name" value={name} onChange={this.handleChange}/>
                   <Input type="text" placeholder="Company name" name="company" value={company} onChange={this.handleChange}/>
@@ -139,6 +141,26 @@ class ContactUs extends React.Component {
                   <Input type="text" placeholder="Email" name="email" value={email} onChange={this.handleChange}/>
                   <Submit type="submit">SEND</Submit>
                 </form>
+                ) : (
+                    <div css={css`height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center;`}>
+                        <div>
+                            <p css={css`
+                                font-weight: 300;
+                                font-size: 20px;
+                                line-height: 150%;
+                                color: #E6E0FF;
+                            `}>Thank you for submitting your interest.</p>
+                                                        <p css={css`
+                                font-weight: 300;
+                                font-size: 20px;
+                                line-height: 150%;
+                                color: #E6E0FF;
+                            `}>We will get back to you shortly.</p>
+                        </div>
+                      
+                    </div>
+                )
+                }
               </Col>
             </Row>
           </div>
