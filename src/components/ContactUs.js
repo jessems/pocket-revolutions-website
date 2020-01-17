@@ -71,7 +71,7 @@ class ContactUs extends React.Component {
             body: encode({ "form-name": "contact", ...this.state })
         })
             .then(() => {
-                // Success!
+                alert(JSON.stringify(this.state));
             })
             .catch(error => alert(error));
 

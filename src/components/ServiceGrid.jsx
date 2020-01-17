@@ -12,6 +12,7 @@ const ServiceGridRow = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 16px;
 `
 
 const ServiceGridCol = styled.div`
@@ -28,7 +29,7 @@ const ServiceGridColTitle = styled.h2`
   margin-left: 0;
   margin-right: 0;
   margin-bottom: 32x;
-  margin-top: 0px;
+  margin-top: 16px;
 `
 
 const ServiceGridColDescription = styled.p`
