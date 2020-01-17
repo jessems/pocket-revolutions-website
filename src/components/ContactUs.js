@@ -68,7 +68,7 @@ class ContactUs extends React.Component {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...this.state })
+            body: encode({ "form-name": "Contact Us Form", ...this.state })
         })
             .then(() => {
                 alert(JSON.stringify(this.state));
@@ -127,8 +127,9 @@ class ContactUs extends React.Component {
               </Col>
               <Col css={css`min-height: 350px;`}>{!submitted ? (
                 <form name="contact" onSubmit={this.handleSubmit}>
-                  <Input type="text" name="name" placeholder="Your name"  value={name} onChange={this.handleChange}/>
-                  <Input type="text" name="company" placeholder="Company name" value={company} onChange={this.handleChange}/>
+                    <input type="hidden" name="form-name" value="contact" />
+                  <Input name="name" type="text" placeholder="Your name"  value={name} onChange={this.handleChange}/>
+                  <Input name="company" type="text" placeholder="Company name" value={company} onChange={this.handleChange}/>
                   <Select name="budget" value={budget} onChange={this.handleChange}>
                     <option value="" disabled hidden>Select your budget</option>
                     <option value="10k20k">CHF 10'000 –– CHF 20'000</option>
@@ -138,7 +139,7 @@ class ContactUs extends React.Component {
                     <option value="200k500k">CHF 200'001 –– CHF 500'000</option>
                     <option value="500kplus">Over CHF 500'001</option>
                   </Select>
-                  <Input type="text" name="email" placeholder="Email" value={email} onChange={this.handleChange}/>
+                  <Input name="email" type="text" placeholder="Email" value={email} onChange={this.handleChange}/>
                   <Submit type="submit">SEND</Submit>
                 </form>
                 ) : (
