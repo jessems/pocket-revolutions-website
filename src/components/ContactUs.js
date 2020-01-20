@@ -1,7 +1,8 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import Container from 'components/Container'
+import { bpMaxSM } from '../lib/breakpoints'
 
 const encode = (data) => {
     return Object.keys(data)
@@ -13,17 +14,28 @@ const Row = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  ${bpMaxSM} {
+    flex-direction: column;
+  }
 
 `;
 const Col = styled.div`
   flex: 1;
   display: flex;
-  flex-direction: col;
+  flex-direction: column;
   justify-content: center;
   margin-top: 64px;
   margin-bottom: 64px;
   padding-left: 64px;
   padding-right: 64px;
+  ${bpMaxSM} {
+    &:nth-of-type(1) {
+        margin-bottom: 16px;
+    }
+    &:nth-of-type(2) {
+        margin-top: 16px;
+    }
+  }
 `;
 
 const Input = styled.input`

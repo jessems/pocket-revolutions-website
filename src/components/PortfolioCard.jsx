@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
-import styled, { css } from 'styled-components'
+import { css } from '@emotion/core'
 import axovaDisplay from './axova_display.png'
 import pingcoinDisplay from './pingcoin_display.png'
 import IndustryIcon from './assets/business-24px.svg'
@@ -32,13 +32,14 @@ class PortfolioCard extends Component {
           background-size: contain;
           background-image: ${this.props.backgroundUrl};
           border-radius: 20px;
-          padding: 20px;
+          padding-right: 20px;
           padding-top: 64px;
           padding-left: 64px;
           padding-bottom: 64px;
           display: flex;
           flex-direction: row;
           ${bpMaxSM} {
+            padding-right: 64px;
             width: auto;
             flex-direction: column;
           }
@@ -81,7 +82,13 @@ class PortfolioCard extends Component {
           >
             {this.props.description}
           </p>
-          <div>
+          <div
+            css={css`
+              ${bpMaxSM} {
+                text-align: center;
+              }
+            `}
+          >
             <Link
               to="/axova"
               css={css`
@@ -105,15 +112,16 @@ class PortfolioCard extends Component {
             flex: 20%;
             padding-left: 16px;
             padding-right: 16px;
-            ${bpMaxSM} {
-              text-align: center;
-            }
           `}
         >
           <ul
             css={css`
               padding-top: 40px;
               list-style: none;
+              ${bpMaxSM} {
+                display: table;
+                margin: 0 auto;
+              }
             `}
           >
             <li
@@ -172,6 +180,10 @@ class PortfolioCard extends Component {
             css={css`
               padding-top: 40px;
               list-style: none;
+              ${bpMaxSM} {
+                display: table;
+                margin: 0 auto;
+              }
             `}
           >
             {this.props.tags.map(value => {
@@ -194,6 +206,7 @@ class PortfolioCard extends Component {
                     margin-right: 8px;
                     white-space: nowrap;
                   `}
+                  key={value}
                 >
                   {value}
                 </li>
@@ -221,13 +234,18 @@ class PortfolioCard extends Component {
               css={css`
                 margin-left: 40px;
                 margin-right: -40px;
+                margin-bottom: 0;
                 width: 600px;
                 transform: scale(2.5);
                 ${bpMaxSM} {
-                  margin-left,margin-right: 0;
+                  margin-left: 0;
+                  margin-right: 0;
+                  margin-bottom: -32px;
+                  margin-top: 16px;
                   transform: scale(1);
                 }
               `}
+              alt=""
             />
           </div>
         </div>

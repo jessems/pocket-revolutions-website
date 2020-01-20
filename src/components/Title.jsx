@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { css } from 'styled-components'
+import { css } from '@emotion/core'
 
 class Title extends Component {
   render() {

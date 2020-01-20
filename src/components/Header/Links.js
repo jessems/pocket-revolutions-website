@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled, { css } from 'styled-components'
+import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 import { useTheme } from '../Theming'
 import ThemeToggler from './ThemeToggler'
 import PocketRevolutionsLogo from '../assets/PocketRevolutions_NEG.svg'
