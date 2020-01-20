@@ -70,7 +70,7 @@ class ContactUs extends React.Component {
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", ...this.state })
+            body: encode({ "form-name": "contactus", ...this.state })
         })
             .then(() => {
                 alert(JSON.stringify(this.state));
