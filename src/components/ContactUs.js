@@ -57,14 +57,14 @@ const Select = styled.select`
   
 
 class ContactUs extends React.Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = { name: "", company: "", budget: "", email: "", submitted: false};
-    //   }
     constructor(props) {
         super(props);
-        this.state = { name: "", email: "", message: "", submitted: false };
+        this.state = { name: "", company: "", budget: "", email: "", submitted: false};
       }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = { name: "", email: "", message: "", submitted: false };
+    //   }
 
     handleSubmit = e => {
         fetch("/", {
@@ -97,8 +97,8 @@ class ContactUs extends React.Component {
     
     render() {
 
-        // const { name, company, budget, email } = this.state;
-        const { name, email, message, submitted } = this.state;
+        const { name, company, budget, email, submitted } = this.state;
+        // const { name, email, message, submitted } = this.state;
 
         return (
       <section css={css`
@@ -141,42 +141,43 @@ class ContactUs extends React.Component {
                 </div>
               </Col>
               <Col css={css`min-height: 350px;`}>{!submitted ? (
-                //  <form name="contactUs" onSubmit={this.handleSubmit}>
-                //   <Input type="text" name="name" value={name} onChange={this.handleChange} />
-                //   <Input type="text" name="company" value={company} onChange={this.handleChange} />
-                //   <Select name="budget" value={budget} onChange={this.handleChange}>
-                //     <option value="" disabled hidden>Select your budget</option>
-                //     <option value="10k20k">CHF 10'000 –– CHF 20'000</option>
-                //     <option value="20k50k">CHF 20'001 –– CHF 50'000</option>
-                //     <option value="50k100k">CHF 50'001 –– CHF 100'000</option>
-                //     <option value="100k200k">CHF 100'001 –– CHF 200'000</option>
-                //     <option value="200k500k">CHF 200'001 –– CHF 500'000</option>
-                //     <option value="500kplus">Over CHF 500'001</option>
-                //   </Select>
-                //   <Input type="email" name="email" value={email} onChange={this.handleChange} />
-                //   <Submit type="submit">SEND</Submit>
-                // </form>
                 <form onSubmit={this.handleSubmit} name="contactus" data-netlify="true" data-netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="contactus" />
-          <p>
-            <label>
-              Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <label>
-              Message: <textarea name="message" value={message} onChange={this.handleChange} />
-            </label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
+                  <Input type="text" name="name" placeholder="Your name" value={name} onChange={this.handleChange} />
+                  <Input type="text" name="company" placeholder="Company name" value={company} onChange={this.handleChange} />
+                  <Select name="budget" value={budget} onChange={this.handleChange}>
+                    <option value="" disabled hidden>Select your budget</option>
+                    <option value="10k20k">CHF 10'000 –– CHF 20'000</option>
+                    <option value="20k50k">CHF 20'001 –– CHF 50'000</option>
+                    <option value="50k100k">CHF 50'001 –– CHF 100'000</option>
+                    <option value="100k200k">CHF 100'001 –– CHF 200'000</option>
+                    <option value="200k500k">CHF 200'001 –– CHF 500'000</option>
+                    <option value="500kplus">Over CHF 500'001</option>
+                  </Select>
+                  <Input type="email" name="email" placeholder="Email" value={email} onChange={this.handleChange} />
+                  <Submit type="submit">SEND</Submit>
+                </form>
+        //         <form onSubmit={this.handleSubmit} name="contactus" data-netlify="true" data-netlify-honeypot="bot-field">
+        //         <input type="hidden" name="form-name" value="contactus" />
+        //   <p>
+        //     <label>
+        //       Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
+        //     </label>
+        //   </p>
+        //   <p>
+        //     <label>
+        //       Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
+        //     </label>
+        //   </p>
+        //   <p>
+        //     <label>
+        //       Message: <textarea name="message" value={message} onChange={this.handleChange} />
+        //     </label>
+        //   </p>
+        //   <p>
+        //     <button type="submit">Send</button>
+        //   </p>
+        // </form>
         
                 ) : (
                     <div css={css`height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center;`}>

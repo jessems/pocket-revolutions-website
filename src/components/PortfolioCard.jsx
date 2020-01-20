@@ -105,6 +105,9 @@ class PortfolioCard extends Component {
             flex: 20%;
             padding-left: 16px;
             padding-right: 16px;
+            ${bpMaxSM} {
+              text-align: center;
+            }
           `}
         >
           <ul
@@ -189,6 +192,7 @@ class PortfolioCard extends Component {
                     padding-bottom: 2px;
                     margin-bottom: 0;
                     margin-right: 8px;
+                    white-space: nowrap;
                   `}
                 >
                   {value}
@@ -220,7 +224,7 @@ class PortfolioCard extends Component {
                 width: 600px;
                 transform: scale(2.5);
                 ${bpMaxSM} {
-                  width: 200px;
+                  margin-left,margin-right: 0;
                   transform: scale(1);
                 }
               `}
