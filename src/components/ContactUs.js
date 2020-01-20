@@ -61,10 +61,7 @@ class ContactUs extends React.Component {
         super(props);
         this.state = { name: "", company: "", budget: "", email: "", submitted: false};
       }
-    // constructor(props) {
-    //     super(props);
-    //     this.state = { name: "", email: "", message: "", submitted: false };
-    //   }
+
 
     handleSubmit = e => {
         fetch("/", {
@@ -73,7 +70,7 @@ class ContactUs extends React.Component {
             body: encode({ "form-name": "contactus", ...this.state })
         })
             .then(() => {
-                alert(JSON.stringify(this.state));
+                // Success!
             })
             .catch(error => alert(error));
 
@@ -81,17 +78,6 @@ class ContactUs extends React.Component {
         this.setState({submitted: true});
     };
 
-    // handleSubmit = e => {
-    //     fetch("/", {
-    //       method: "POST",
-    //       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    //       body: encode({ "form-name": "contact", ...this.state })
-    //     })
-    //       .then(() => alert("Success!"))
-    //       .catch(error => alert(error));
-  
-    //     e.preventDefault();
-    //   };
 
     handleChange = e => this.setState({ [e.target.name]: e.target.value });
     
@@ -157,27 +143,6 @@ class ContactUs extends React.Component {
                   <Input type="email" name="email" placeholder="Email" value={email} onChange={this.handleChange} />
                   <Submit type="submit">SEND</Submit>
                 </form>
-        //         <form onSubmit={this.handleSubmit} name="contactus" data-netlify="true" data-netlify-honeypot="bot-field">
-        //         <input type="hidden" name="form-name" value="contactus" />
-        //   <p>
-        //     <label>
-        //       Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
-        //     </label>
-        //   </p>
-        //   <p>
-        //     <label>
-        //       Your Email: <input type="email" name="email" value={email} onChange={this.handleChange} />
-        //     </label>
-        //   </p>
-        //   <p>
-        //     <label>
-        //       Message: <textarea name="message" value={message} onChange={this.handleChange} />
-        //     </label>
-        //   </p>
-        //   <p>
-        //     <button type="submit">Send</button>
-        //   </p>
-        // </form>
         
                 ) : (
                     <div css={css`height: 350px; display: flex; flex-direction: column; justify-content: center; text-align: center;`}>
