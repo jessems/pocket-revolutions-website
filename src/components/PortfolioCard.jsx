@@ -37,6 +37,10 @@ class PortfolioCard extends Component {
           padding-bottom: 64px;
           display: flex;
           flex-direction: row;
+          ${bpMaxSM} {
+            width: auto;
+            flex-direction: column;
+          }
           }
         `}
       >
