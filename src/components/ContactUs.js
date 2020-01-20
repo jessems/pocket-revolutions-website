@@ -156,7 +156,7 @@ class ContactUs extends React.Component {
                 //   <Input type="email" name="email" value={email} onChange={this.handleChange} />
                 //   <Submit type="submit">SEND</Submit>
                 // </form>
-                <form onSubmit={this.handleSubmit}>
+                <form onSubmit={this.handleSubmit} name="contactus" data-netlify="true" data-netlify-honeypot="bot-field">
                 <input type="hidden" name="form-name" value="contactus" />
           <p>
             <label>

@@ -175,7 +175,6 @@ class PortfolioCard extends Component {
               return (
                 <li
                   css={css`
-                    // background-color: #ffc8c8;
                     background-color: ${this.tagsColorMapping[value][
                       `background-color`
                     ]};
@@ -189,6 +188,7 @@ class PortfolioCard extends Component {
                     padding-top: 2px;
                     padding-bottom: 2px;
                     margin-bottom: 0;
+                    margin-right: 8px;
                   `}
                 >
                   {value}
@@ -219,6 +219,10 @@ class PortfolioCard extends Component {
                 margin-right: -40px;
                 width: 600px;
                 transform: scale(2.5);
+                ${bpMaxSM} {
+                  width: 200px;
+                  transform: scale(1);
+                }
               `}
             />
           </div>
