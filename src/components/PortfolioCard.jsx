@@ -6,6 +6,7 @@ import pingcoinDisplay from './pingcoin_display.png'
 import IndustryIcon from './assets/business-24px.svg'
 import FormFactorIcon from './assets/phonelink-24px.svg'
 import UserTypeIcon from './assets/supervised_user_circle-24px.svg'
+import { bpMaxSM } from '../lib/breakpoints'
 
 class PortfolioCard extends Component {
   tagsColorMapping = {
@@ -21,7 +22,7 @@ class PortfolioCard extends Component {
     return (
       <div
         css={css`
-          width: 960px;
+          max-width: 960px;
           margin-bottom: 64px;
           margin-right: auto;
           margin-left: auto;
