@@ -157,7 +157,7 @@ class ContactUs extends React.Component {
                 //   <Submit type="submit">SEND</Submit>
                 // </form>
                 <form onSubmit={this.handleSubmit}>
-                <input type="hidden" name="contactus" value="contactus" />
+                <input type="hidden" name="form-name" value="contactus" />
           <p>
             <label>
               Your Name: <input type="text" name="name" value={name} onChange={this.handleChange} />
