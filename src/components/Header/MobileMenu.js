@@ -79,6 +79,7 @@ const Toggle = ({ children }) => {
           `}
         />
       </button>
+      <div>Test!</div>
       {isToggledOn && (
         <div
           css={css`

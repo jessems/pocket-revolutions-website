@@ -5,6 +5,7 @@ import { css } from '@emotion/core'
 import { useTheme } from '../Theming'
 import ThemeToggler from './ThemeToggler'
 import PocketRevolutionsLogo from '../assets/PocketRevolutions_NEG.svg'
+import { bpMaxSM } from '../../lib/breakpoints'
 
 export default () => {
   const theme = useTheme()
@@ -63,9 +64,14 @@ export default () => {
       <StyledLink to="/methods" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
         Methods
       </StyledLink>
-      <Link to="/" aria-label="Home">
+      <Link to="/" aria-label="Home" css={css`
+        ${bpMaxSM} {
+          display: none;
+        }
+      `}>
         <PocketRevolutionsLogo css={css`
         width: 144px;
+
         & path {
           fill: #EC96DC!important; 
         }

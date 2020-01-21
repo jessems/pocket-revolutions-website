@@ -8,17 +8,27 @@ import ProductStrategyIcon from './assets/product_strategy_icon.svg'
 import InnovationSessionsIcon from './assets/innovation_sessions_icon.svg'
 import DesignAndDevelopmentIcon from './assets/design_and_development_icon.svg'
 import { getDefaultLibFileName } from 'typescript'
+import { bpMaxSM, bpMaxMD, bpMaxXS } from '../lib/breakpoints'
 
 const ServiceGridRow = styled.div`
   display: flex;
-  flex-direction: row;
+  //   flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-between;
   margin-bottom: 16px;
 `
 
 const ServiceGridCol = styled.div`
   min-height: 124px;
-  width: 31%;
+  //   width: 31%;
+  flex-basis: 33%;
+
+  ${bpMaxSM} {
+    flex-basis: 50%;
+  }
+  ${bpMaxXS} {
+    flex-basis: 100%;
+  }
 `
 
 const ServiceGridColTitle = styled.h2`
@@ -70,8 +80,6 @@ class ServiceGrid extends Component {
               team generate and evaluate ideas.
             </ServiceGridColDescription>
           </ServiceGridCol>
-        </ServiceGridRow>
-        <ServiceGridRow>
           <ServiceGridCol>
             <DesignAndDevelopmentIcon />
             <ServiceGridColTitle>Design & Development</ServiceGridColTitle>

@@ -7,6 +7,7 @@ import Link from 'components/Link'
 import { useTheme } from 'components/Theming'
 import Container from 'components/Container'
 import PortfolioCard from 'components/PortfolioCard'
+import SmallAsymmetricallyRoundedCard from 'components/SmallAsymmetricallyRoundedCard'
 import ServiceGrid from 'components/ServiceGrid'
 import Title from 'components/Title'
 import { rhythm } from '../lib/typography'
@@ -14,6 +15,7 @@ import AxovaBackground from 'components/axova-background.svg'
 import PingcoinBackground from 'components/pingcoin-background.svg'
 import HeroImage from 'components/hero-image.png'
 import ContactUs from 'components/ContactUs'
+import { bpMaxSM } from '../lib/breakpoints'
 
 
 const Hero = () => {
@@ -41,9 +43,16 @@ const Hero = () => {
         <div css={css`
                     display: flex;
                     flex-direction: row;
-                    justify-content: space-between;   
+                    justify-content: space-between;
+                    ${bpMaxSM} {
+                      justify-content: center;
+                    }
         `}>
-          <div>
+          <div css={css`
+            ${bpMaxSM} {
+              text-align: center;
+            }
+          `}>
 
             <h1
               css={css`
@@ -72,8 +81,14 @@ const Hero = () => {
           </div>
           <div css={css`
           flex: 0.9;
+          ${bpMaxSM} {
+            display: none;
+          }
           `}>
-            <img src={HeroImage} css={css`margin-top: -64px;`}/>
+            <img src={HeroImage} css={css`
+            margin-top: -64px;
+            
+            `}/>
           </div>
         </div>
       </Container>
@@ -153,8 +168,8 @@ export default function Index({ data: { site, allMdx } }) {
       
         
         <Title text="What we do" />
-        <div css={css`display: flex; font-weight: 300;`}>
-          <div css={css`width: 66%;`}>
+        <div css={css`display: flex; font-weight: 300; justify-content: flex-start;`}>
+          <div css={css`flex-basis: 66%;`}>
             <SubHeading>Helping you to go from an idea to a successful application</SubHeading>
 
             <p>If you want to build an app, you typically have several options. If you've got an in-house team you can develop the app internally. If you don't, you can work with an external agency.</p>
@@ -182,8 +197,25 @@ export default function Index({ data: { site, allMdx } }) {
             
             <p>It should come as not suprise that to successfully navigate these risks you need a partner that understands these domains.</p>
           </div>
-          <div>
-
+          <div css={css`
+            flex-basis: 33%;
+            padding-left: 32px;
+          `}>
+            <SmallAsymmetricallyRoundedCard 
+            title="How we work" 
+            text="Making sure the right things get built (Lean) and making sure it gets built right (Agile)"
+            color="#ff9900"
+            />
+            <SmallAsymmetricallyRoundedCard 
+            title="Past work" 
+            text="Let our portfolio of past client projects speak for itself"
+            color="#DB00FF"
+            />
+            <SmallAsymmetricallyRoundedCard 
+            title="What we offer" 
+            text="Full-service digital transformation to specific competencies"
+            color="#00C2FF"
+            />
           </div>
         </div>
 
