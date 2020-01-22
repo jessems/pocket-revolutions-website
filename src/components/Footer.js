@@ -54,7 +54,7 @@ const Footer = ({ author, noSubscribeForm }) => (
             <li>Hardstrasse 42</li>
             <li>4133 Pratteln</li>
             <li>Switzerland</li>
-            <li>+41 (0) 76 253 71 30</li>
+            <li>+41 (0) 61 826 11 00</li>
           </ul>
         </div>
           

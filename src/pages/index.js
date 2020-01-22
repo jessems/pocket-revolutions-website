@@ -280,7 +280,7 @@ export const pageQuery = graphql`
     allMdx(
       limit: 3
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { published: { ne: false } } }
+      filter: { frontmatter: { published: { ne: false }, contentType: { eq: "post" } } }
     ) {
       edges {
         node {
