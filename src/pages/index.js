@@ -26,7 +26,6 @@ const Hero = () => {
         color: ${theme.colors.white};
         width: 100%;
         min-height: 360px;
-        // background: ${theme.colors.primary};
         background-image: linear-gradient(to right, #C7017F, #153D8A);
         padding: 20px 0 30px 0;
         display: flex;
@@ -169,7 +168,12 @@ export default function Index({ data: { site, allMdx } }) {
         
         <Title text="What we do" />
         <div css={css`display: flex; font-weight: 300; justify-content: flex-start;`}>
-          <div css={css`flex-basis: 66%;`}>
+          <div css={css`
+            flex-basis: 66%;
+            ${bpMaxSM} {
+              flex-basis: 100%;
+            }
+          `}>
             <SubHeading>Helping you to go from an idea to a successful application</SubHeading>
 
             <p>If you want to build an app, you typically have several options. If you've got an in-house team you can develop the app internally. If you don't, you can work with an external agency.</p>
@@ -200,6 +204,9 @@ export default function Index({ data: { site, allMdx } }) {
           <div css={css`
             flex-basis: 33%;
             padding-left: 32px;
+            ${bpMaxSM} {
+              display: none;
+            }
           `}>
             <SmallAsymmetricallyRoundedCard 
             title="How we work" 
