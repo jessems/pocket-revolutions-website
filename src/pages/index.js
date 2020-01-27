@@ -132,7 +132,7 @@ export default function Index({ data: { site, allMdx } }) {
       >
         
 
-        <Title text="Portfolio" />
+        <Title text="Portfolio" id="portfolio"/>
         <PortfolioCard 
           title="Reducing phone support with a self-serve tracker app" 
           appName="My Axova"
@@ -228,7 +228,7 @@ export default function Index({ data: { site, allMdx } }) {
 
 
 
-        <Title text="Our Services" />
+        <Title text="Our Services" id="services"/>
         <div css={css`
         `}>
           <ServiceGrid />

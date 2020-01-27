@@ -55,13 +55,13 @@ export default () => {
   `
   return (
     <React.Fragment>
-      <StyledLink to="/services" activeClassName="active" aria-label="View blog page" css={css`margin-left: 0; margin-right: 16px;`}>
+      <StyledLink to="/#services" activeClassName="active" aria-label="View services" css={css`margin-left: 0; margin-right: 16px;`}>
         Services
       </StyledLink>
-      <StyledLink to="/portfolio" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
+      <StyledLink to="/#portfolio" activeClassName="active" aria-label="View portfolio page" css={css`margin-left: 16px; margin-right: 16px;`}>
         Portfolio
       </StyledLink>
-      <StyledLink to="/methods" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
+      <StyledLink to="/#services" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
         Methods
       </StyledLink>
       <Link to="/" aria-label="Home" css={css`
@@ -85,13 +85,13 @@ export default () => {
         margin-right: 32px
         `}/>
       </Link> 
-      <StyledLink to="/learn" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
+      <StyledLink to="/learn" activeClassName="active" aria-label="View learn page" css={css`margin-left: 16px; margin-right: 16px;`}>
         Learn
       </StyledLink>
-      <StyledLink to="/about" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
+      <StyledLink to="/about" activeClassName="active" aria-label="View about page" css={css`margin-left: 16px; margin-right: 16px;`}>
         About
       </StyledLink>
-      <StyledLink to="/contact" activeClassName="active" aria-label="View blog page" css={css`margin-left: 16px; margin-right: 16px;`}>
+      <StyledLink to="/#contact" activeClassName="active" aria-label="View contact" css={css`margin-left: 16px; margin-right: 16px;`}>
         Contact
       </StyledLink>
 

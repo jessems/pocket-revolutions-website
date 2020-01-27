@@ -4,7 +4,7 @@ import { css } from '@emotion/core'
 class Title extends Component {
   render() {
     return (
-      <div>
+      <div id={this.props.id}>
         <h1
           css={css`
             font-size: 30px;

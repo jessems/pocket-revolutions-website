@@ -99,7 +99,9 @@ class ContactUs extends React.Component {
         // const { name, email, message, submitted } = this.state;
 
         return (
-      <section css={css`
+      <section 
+      id={this.props.id}
+      css={css`
       background: rgb(41,1,107);
       background: linear-gradient(90deg, rgba(41,1,107,1) 0%, rgba(105,23,169,1) 100%);
       color: #fff;
