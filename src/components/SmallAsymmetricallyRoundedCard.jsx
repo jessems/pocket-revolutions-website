@@ -42,9 +42,10 @@ class SmallAsymmetricallyRoundedCard extends Component {
           css={css`
             margin: 0;
             font-size: 16px;
-            line-height: 21px;
+            line-height: 24px;
             color: #737373;
-            font-weight: normal;
+            font-weight: 300;
+            font-family: 'Open Sans';
           `}
         >
           {this.props.text}

@@ -43,6 +43,7 @@ const Input = styled.input`
   opacity: 0.8;
   width: 100%;
   height: 60px;
+  font-family: 'Open Sans';
 `
 
 
@@ -65,6 +66,7 @@ const Select = styled.select`
     width: 100%;
     height: 60px;
     margin: 5px 0px 0px 0px;
+    font-family: 'Open Sans';
 `
   
 
@@ -123,6 +125,8 @@ class ContactUs extends React.Component {
                     color: #9685DA;
                     line-height: 120%;
                     font-size: 14px;
+                    letter-spacing: 0.05em;
+
                   `}>Get in touch</span>
                   <h3 css={css`
                     font-weight: 500;
@@ -137,7 +141,9 @@ class ContactUs extends React.Component {
                     font-size: 20px;
                     line-height: 150%;
                     color: #E6E0FF;
-                  `}>Get in touch with us here and we wil surely get back to you.</p>
+                    font-family: 'Open Sans';
+                    opacity: 0.8;
+                  `}>Get in touch with us here and we will get back to your shortly.</p>
                 </div>
               </Col>
               <Col css={css`min-height: 350px;`}>{!submitted ? (

@@ -43,13 +43,14 @@ const getGlobalStyles = theme => {
     h6 {
       color: ${theme.colors.text};
       a {
-        color: ${theme.colors.text};
+        color: ${theme.colors.blue};
         &:hover,
         &:focus {
           color: ${theme.colors.text};
         }
       }
     }
+  
     ${bpMaxSM} {
       p,
       em,

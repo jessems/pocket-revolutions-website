@@ -15,22 +15,26 @@ const Footer = ({ author, noSubscribeForm }) => (
       css={css`
         padding-top: 32px;
         ${bpMaxSM} {
-          padding-top: 0;
+          
         }
       `}
     >
       
       <div
+        id="footer-content"
         css={css`
           display: flex;
+          flex-flow: row wrap;
           align-items: flex-start;
           justify-content: space-between;
         `}
       >
         <div
+        id="impressum"
           css={css`
             font-size: 90%;
             opacity: 0.7;
+            flex-basis: 50%;
           `}
         >
         <PocketRevolutionsLogo css={css`
@@ -46,7 +50,10 @@ const Footer = ({ author, noSubscribeForm }) => (
           fill: #7F399D!important; 
         }
         `}/>
-        <div css={css`font-size: 12px; margin-bottom: 16px;`}>
+        <div css={css`
+          font-size: 12px; 
+          margin-bottom: 16px;
+        `}>
           From idea to app
         </div>
         <div>
@@ -64,18 +71,27 @@ const Footer = ({ author, noSubscribeForm }) => (
             {`Pocket Revolutions AG \u00A9 ${new Date().getFullYear()}`}
           </div>
         </div>
-        <div>
+        <div css={css`
+          width: 150px;
+          ${bpMaxSM} {
+            flex-basis: 50%
+            text-align: center;
+          }
+        `}>
           <ul css={css`list-style: none; font-size: 16.2px;`}>
-            <li><Link to="/services">Services</Link></li>
-            <li><Link to="/portfolio">Portfolio</Link></li>
-            <li><Link to="/methods">Methods</Link></li>
-            <li><Link to="/methods">Learn</Link></li>
-            <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/blog">About</Link></li>
-            <li><Link to="/contact">Contact</Link></li>
+            <li><Link to="/#services">Services</Link></li>
+            <li><Link to="/#portfolio">Portfolio</Link></li>
+            <li><Link to="/#services">Methods</Link></li>
+            <li><Link to="/learn">Learn</Link></li>
+            <li><Link to="/#whatwedo">About</Link></li>
+            <li><Link to="/#contact">Contact</Link></li>
           </ul>
         </div>
-        <div>
+        <div css={css`
+          ${bpMaxSM} {
+            display: none;
+          }
+        `}>
           <ul css={css`list-style: none; font-size: 16.2px;`}>
             <li><Link>Design & Development</Link></li>
             <li><Link>User Research</Link></li>

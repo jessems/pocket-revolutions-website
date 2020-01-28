@@ -94,7 +94,7 @@ class PortfolioCard extends Component {
               }
             `}
           >
-            <Link
+            {/* <Link
               to="/axova"
               css={css`
                 font-weight: bold;
@@ -109,7 +109,7 @@ class PortfolioCard extends Component {
               `}
             >
               Full case study
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div

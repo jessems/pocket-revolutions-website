@@ -12,7 +12,6 @@ import { bpMaxSM, bpMaxMD, bpMaxXS } from '../lib/breakpoints'
 
 const ServiceGridRow = styled.div`
   display: flex;
-  //   flex-direction: row;
   flex-flow: row wrap;
   justify-content: space-between;
   margin-bottom: 16px;
@@ -21,10 +20,10 @@ const ServiceGridRow = styled.div`
 const ServiceGridCol = styled.div`
   min-height: 124px;
   //   width: 31%;
-  flex-basis: 33%;
+  flex-basis: 31%;
 
   ${bpMaxSM} {
-    flex-basis: 50%;
+    flex-basis: 44%;
   }
   ${bpMaxXS} {
     flex-basis: 100%;
@@ -41,6 +40,8 @@ const ServiceGridColTitle = styled.h2`
   margin-right: 0;
   margin-bottom: 32x;
   margin-top: 16px;
+  font-family: Cairo;
+  font-weight: 600;
 `
 
 const ServiceGridColDescription = styled.p`
@@ -49,12 +50,13 @@ const ServiceGridColDescription = styled.p`
   font-size: 14px;
   line-height: 180%;
   letter-spacing: 0.04em;
+  font-family: 'Open Sans';
 `
 
 class ServiceGrid extends Component {
   render() {
     return (
-      <div>
+      <div css={css``}>
         <ServiceGridRow>
           <ServiceGridCol>
             <DigitalTransformationAuditIcon />

@@ -131,10 +131,11 @@ const Hero = () => {
 const Description = styled.p`
   margin-bottom: 10px;
   display: inline-block;
+  font-family: 'Open Sans';
 `
 
 const SubHeading = styled.h2`
-  font-weight: 500; 
+  font-weight: 700; 
   color: #153D8A; 
   font-size: 24px;
   margin: 0;
@@ -142,9 +143,9 @@ const SubHeading = styled.h2`
 `
 
 const Paragraph = styled.p`
+  font-size: 18px;
   font-family: 'Open Sans';
-  font-weight: 300;
-  color: 
+  font-weight: 400;
 `
 
 
@@ -182,7 +183,7 @@ export default function Index({ data: { site, allMdx } }) {
           backgroundUrl={backgroundMapping['axova']}
           />
           <PortfolioCard 
-          title="Digitalising the ping test – an age-old method of catching counterfeit coins" 
+          title="Digitalising the ping test — an age-old method of catching counterfeit coins" 
           appName="Pingcoin"
           description="Experienced coin collectors are often able to determine if a coin is authentic gold or silver by listening to the sound it produces upon a gentle strike.
           Pingcoin brings this analog method into the digital realm, and in doing so enhances its accuracy and protects anyone with a smartphone from getting fooled by a counterfeit coin."
@@ -199,8 +200,14 @@ export default function Index({ data: { site, allMdx } }) {
           />
       
         
-        <Title text="What we do" />
-        <div css={css`display: flex; font-weight: 300; justify-content: flex-start;`}>
+        <Title text="What we do" id="whatwedo"/>
+        <div css={
+          css`
+            display: flex; 
+            font-weight: 400; 
+            justify-content: flex-start;
+            font-family: 'Open Sans';
+          `}>
           <div css={css`
             flex-basis: 66%;
             padding-right: 16px;
@@ -217,11 +224,10 @@ export default function Index({ data: { site, allMdx } }) {
 
             <Paragraph>Apps can be wonderful, sexy and even life-changing. Who doesn't rely on the magic of an app like Google Maps these days.</Paragraph>
 
-
+            <div css={css`height: 32px;`}></div>
             <SubHeading>Reduce the risks involved in developing a digital product</SubHeading>
-            <Paragraph>>But software development is a risky endeavour for any business.</Paragraph>
 
-            
+            <Paragraph>But software development is a risky endeavour for any business.</Paragraph>
             <ul>
                   <li>There is the financial risk involved in financing the development of the application –– a price tag that often remains unknown until late in the project.</li>
                   <li>There is the market risk for B2C and B2B apps –– whether or not they will get traction and prove valuable to users</li>
@@ -268,44 +274,47 @@ export default function Index({ data: { site, allMdx } }) {
           <ServiceGrid />
 
         </div>
-
-        <Title text="Posts" />
-        {allMdx.edges.map(({ node: post }) => (
-          <div
-            key={post.id}
-            css={css`
-              margin-bottom: 40px;
-            `}
-          >
-            <h2
-              css={css({
-                marginBottom: rhythm(0.3),
-                transition: 'all 150ms ease',
-                ':hover': {
-                  color: theme.colors.primary,
-                },
-              })}
+        
+        <section css={css`margin-bottom: 128px;`}>
+          <Title text="Posts" />
+          {allMdx.edges.map(({ node: post }) => (
+            <div
+              key={post.id}
+              css={css`
+                margin-bottom: 40px;
+              `}
             >
-              <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
+              <h2
+                css={css({
+                  marginBottom: rhythm(0.3),
+                  marginTop: 0,
+                  transition: 'all 150ms ease',
+                  ':hover': {
+                    color: theme.colors.primary,
+                  },
+                })}
               >
-                {post.frontmatter.title}
-              </Link>
-            </h2>
-            <Description>
-              {post.excerpt}{' '}
-              <Link
-                to={post.frontmatter.slug}
-                aria-label={`View ${post.frontmatter.title}`}
-              >
-                Read Article →
-              </Link>
-            </Description>
-          </div>
-        ))}
+                <Link
+                  to={post.frontmatter.slug}
+                  aria-label={`View ${post.frontmatter.title}`}
+                >
+                  {post.frontmatter.title}
+                </Link>
+              </h2>
+              <Description>
+                {post.excerpt}{' '}
+                <Link
+                  to={post.frontmatter.slug}
+                  aria-label={`View ${post.frontmatter.title}`}
+                >
+                  Read Article →
+                </Link>
+              </Description>
+            </div>
+          ))}
+        </section>
       </Container>
-      <ContactUs />
+      <ContactUs id="contact"/>
     </Layout>
   )
 }

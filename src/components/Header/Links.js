@@ -92,10 +92,10 @@ export default () => {
         margin-right: 32px
         `}/>
       </Link> 
-      <StyledLink to="/learn" activeClassName="active" aria-label="View learn page" css={css`margin-left: 16px; margin-right: 16px;`}>
+      <StyledLink to="/learn" activeClassName="active" aria-label="View blog" css={css`margin-left: 16px; margin-right: 16px;`}>
         Learn
       </StyledLink>
-      <StyledLink to="/about" activeClassName="active" aria-label="View about page" css={css`margin-left: 16px; margin-right: 16px;`}>
+      <StyledLink to="/#whatwedo" activeClassName="active" aria-label="View about page" css={css`margin-left: 16px; margin-right: 16px;`}>
         About
       </StyledLink>
       <StyledLink to="/#contact" activeClassName="active" aria-label="View contact" css={css`margin-left: 16px; margin-right: 16px;`}>
