@@ -48,13 +48,17 @@ class PortfolioCard extends Component {
       >
         <div
           css={css`
-            flex: 50%;
+            flex: 44%;
+            padding-right: 32px;
+            ${bpMaxSM} {
+              padding-right: 0px;
+            }
           `}
         >
           <h2
             css={css`
               font-size: 24px;
-              font-weight: 500;
+              font-weight: 600;
               color: ${this.props.titleColor};
               margin: 0;
               line-height: 28px;
@@ -78,6 +82,7 @@ class PortfolioCard extends Component {
               font-size: 18px;
               font-weight: 300;
               color: #353535;
+              font-family: 'Open Sans';
             `}
           >
             {this.props.description}

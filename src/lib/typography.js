@@ -8,13 +8,22 @@ import '../fonts/fonts.css'
 //   }
 // });
 
+// export const fonts = {
+//   regular: 'Ubuntu',
+//   regularItalic: 'Ubuntu',
+//   semibold: 'Ubuntu',
+//   semiboldItalic: 'Ubuntu',
+//   bold: 'Ubuntu',
+//   boldItalic: 'Ubuntu',
+// }
+
 export const fonts = {
-  regular: 'Ubuntu',
-  regularItalic: 'Ubuntu',
-  semibold: 'Ubuntu',
-  semiboldItalic: 'Ubuntu',
-  bold: 'Ubuntu',
-  boldItalic: 'Ubuntu',
+  regular: 'Cairo',
+  regularItalic: 'Cairo',
+  semibold: 'Cairo',
+  semiboldItalic: 'Cairo',
+  bold: 'Cairo',
+  boldItalic: 'Cairo',
 }
 
 

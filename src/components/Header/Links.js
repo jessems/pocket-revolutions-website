@@ -55,6 +55,13 @@ export default () => {
   `
   return (
     <React.Fragment>
+      <div css={css`
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      `}>
       <StyledLink to="/#services" activeClassName="active" aria-label="View services" css={css`margin-left: 0; margin-right: 16px;`}>
         Services
       </StyledLink>
@@ -100,6 +107,7 @@ export default () => {
         toggleTheme={theme.toggleTheme}
         themeName={theme.themeName}
       /> */}
+      </div>
     </React.Fragment>
   )
 }

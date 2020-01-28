@@ -16,6 +16,7 @@ import PingcoinBackground from 'components/pingcoin-background.svg'
 import HeroImage from 'components/hero-image.png'
 import ContactUs from 'components/ContactUs'
 import { bpMaxSM } from '../lib/breakpoints'
+import HeroBackground from 'components/assets/hero_background.svg'
 
 
 const Hero = () => {
@@ -26,19 +27,19 @@ const Hero = () => {
         color: ${theme.colors.white};
         width: 100%;
         min-height: 360px;
-        background-image: linear-gradient(to right, #C7017F, #153D8A);
         padding: 20px 0 30px 0;
         display: flex;
-        clip-path: ellipse(100% 120% at 60% -20%);
+        ${bpMaxSM} {
+        }
       `}
     >
       <Container
         css={css`
-
+          z-index: 2;
           
         `}
       >
-
+        
         <div css={css`
                     display: flex;
                     flex-direction: row;
@@ -56,10 +57,11 @@ const Hero = () => {
             <h1
               css={css`
                 color: ${theme.colors.white};
-                font-weight: 500;
+                font-weight: 600;
                 position: relative;
                 z-index: 5;
                 line-height: 1.5;
+                font-size: 32px;
                 margin: 0;
                 max-width: ${rhythm(15)};
               `}
@@ -68,8 +70,10 @@ const Hero = () => {
             </h1>
             <h2 css={css`
                 color: ${theme.colors.white};
-                font-weight: 300;
+                font-weight: 200;
                 position: relative;
+                font-family: 'Open Sans';
+                font-size: 24px;
                 z-index: 5;
                 line-height: 1.5;
                 margin: 0;
@@ -91,6 +95,29 @@ const Hero = () => {
           </div>
         </div>
       </Container>
+      <div css={css`
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        top: -1800px;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        display: flex;
+        width: 100%;
+        z-index: 1;
+        ${bpMaxSM} {
+          top: -1900px;
+        }
+      `}>
+      <HeroBackground css={css`
+          width: auto;
+          flex-basis: auto;
+          flex-grow: 0;
+          flex-shrink: 0;
+        `}/>
+      </div>
+      
       <div
         css={css`
           height: 150px;
@@ -112,6 +139,12 @@ const SubHeading = styled.h2`
   font-size: 24px;
   margin: 0;
   margin-bottom: 32px;
+`
+
+const Paragraph = styled.p`
+  font-family: 'Open Sans';
+  font-weight: 300;
+  color: 
 `
 
 
@@ -149,7 +182,7 @@ export default function Index({ data: { site, allMdx } }) {
           backgroundUrl={backgroundMapping['axova']}
           />
           <PortfolioCard 
-          title="Digitalising the ping test –– an age-old method of catching counterfeit coins" 
+          title="Digitalising the ping test – an age-old method of catching counterfeit coins" 
           appName="Pingcoin"
           description="Experienced coin collectors are often able to determine if a coin is authentic gold or silver by listening to the sound it produces upon a gentle strike.
           Pingcoin brings this analog method into the digital realm, and in doing so enhances its accuracy and protects anyone with a smartphone from getting fooled by a counterfeit coin."
@@ -170,22 +203,23 @@ export default function Index({ data: { site, allMdx } }) {
         <div css={css`display: flex; font-weight: 300; justify-content: flex-start;`}>
           <div css={css`
             flex-basis: 66%;
+            padding-right: 16px;
             ${bpMaxSM} {
               flex-basis: 100%;
             }
           `}>
             <SubHeading>Helping you to go from an idea to a successful application</SubHeading>
 
-            <p>If you want to build an app, you typically have several options. If you've got an in-house team you can develop the app internally. If you don't, you can work with an external agency.</p>
+            <Paragraph>If you want to build an app, you typically have several options. If you've got an in-house team you can develop the app internally. If you don't, you can work with an external agency.</Paragraph>
             
-            <p>We are primarily interested in helping you achieve your business outcomes. If software is the right tool for that, then by all means, let's build it.
-            But sometimes software isn't the right tool. </p>
+            <Paragraph>We are primarily interested in helping you achieve your business outcomes. If software is the right tool for that, then by all means, let's build it.
+            But sometimes software isn't the right tool. </Paragraph>
 
-            <p>Apps can be wonderful, sexy and even life-changing. Who doesn't rely on the magic of an app like Google Maps these days.</p>
+            <Paragraph>Apps can be wonderful, sexy and even life-changing. Who doesn't rely on the magic of an app like Google Maps these days.</Paragraph>
 
 
             <SubHeading>Reduce the risks involved in developing a digital product</SubHeading>
-            <p>But software development is a risky endeavour for any business.</p>
+            <Paragraph>>But software development is a risky endeavour for any business.</Paragraph>
 
             
             <ul>
