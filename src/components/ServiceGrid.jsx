@@ -60,7 +60,7 @@ class ServiceGrid extends Component {
         <ServiceGridRow>
           <ServiceGridCol>
             <DigitalTransformationAuditIcon />
-            <ServiceGridColTitle>Digitalation Audit</ServiceGridColTitle>
+            <ServiceGridColTitle>Digitalization</ServiceGridColTitle>
             <ServiceGridColDescription>
               Uncover how you can leverage technology to streamline your
               business and gain a competitive advantage?

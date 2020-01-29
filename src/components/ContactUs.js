@@ -143,7 +143,7 @@ class ContactUs extends React.Component {
                     color: #E6E0FF;
                     font-family: 'Open Sans';
                     opacity: 0.8;
-                  `}>Get in touch with us here and we will get back to your shortly.</p>
+                  `}>Get in touch with us here and we will get back to you shortly.</p>
                 </div>
               </Col>
               <Col css={css`min-height: 350px;`}>{!submitted ? (

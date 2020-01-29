@@ -1,6 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/core'
-import { bpMaxSM } from '../lib/breakpoints'
+import { bpMaxSM, bpMaxMD, bpMaxXS } from '../lib/breakpoints'
 import SubscribeForm from './Forms/Subscribe'
 import { Twitter, LinkedIn } from './Social'
 import Container from './Container'
@@ -26,15 +26,31 @@ const Footer = ({ author, noSubscribeForm }) => (
           display: flex;
           flex-flow: row wrap;
           align-items: flex-start;
-          justify-content: space-between;
+          justify-content: space-evenly;
+          ${bpMaxMD} {
+            justify-content: space-between;
+          }
+          ${bpMaxXS} {
+            justify-content: space-evenly;
+          }
         `}
       >
         <div
         id="impressum"
           css={css`
+            order: 1;
             font-size: 90%;
             opacity: 0.7;
-            flex-basis: 50%;
+            min-width: 14rem;
+            ${bpMaxMD} {
+              order: 1;
+            }
+            ${bpMaxSM} {
+              order: 1;
+            }
+            ${bpMaxXS} {
+              order: 2;
+            }
           `}
         >
         <PocketRevolutionsLogo css={css`
@@ -72,13 +88,23 @@ const Footer = ({ author, noSubscribeForm }) => (
           </div>
         </div>
         <div css={css`
-          width: 150px;
-          ${bpMaxSM} {
-            flex-basis: 50%
+          min-width: 14rem;
+          text-align: center;
+          order: 2;
+          ${bpMaxMD} {
             text-align: center;
+            order: 2;
+          }
+          ${bpMaxSM} {
+            text-align: center;
+            order: 2;
+          }
+          ${bpMaxXS} {
+            order: 1;
           }
         `}>
-          <ul css={css`list-style: none; font-size: 16.2px;`}>
+          <h4 css={css`margin-top: 0; font-size: 20px; color: #737373;`}>Quick Links</h4>
+          <ul css={css`list-style: none; font-size: 16.2px; font-weight: 600;`}>
             <li><Link to="/#services">Services</Link></li>
             <li><Link to="/#portfolio">Portfolio</Link></li>
             <li><Link to="/#services">Methods</Link></li>
@@ -88,10 +114,14 @@ const Footer = ({ author, noSubscribeForm }) => (
           </ul>
         </div>
         <div css={css`
+          min-width: 14rem;
+          text-align: center;
+          order: 3;
           ${bpMaxSM} {
             display: none;
           }
         `}>
+          <h4 css={css`margin-top: 0; font-size: 20px; color: #737373;`}>Our services</h4>
           <ul css={css`list-style: none; font-size: 16.2px;`}>
             <li><Link>Design & Development</Link></li>
             <li><Link>User Research</Link></li>
@@ -99,6 +129,7 @@ const Footer = ({ author, noSubscribeForm }) => (
             <li><Link>Product Design</Link></li>
             <li><Link>Software Development</Link></li>
           </ul>
+          <hr css={css`margin: 16px`}/>
           <ul css={css`list-style: none; font-size: 16.2px;`}>
             <li><Link>Terms & Conditions</Link></li>
             <li><Link>Impressum</Link></li>

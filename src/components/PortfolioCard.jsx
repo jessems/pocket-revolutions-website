@@ -144,7 +144,7 @@ class PortfolioCard extends Component {
                   fill: rgba(123, 123, 123, 0.9);
                 `}
               />
-              Energy Sector
+              {this.props.industry}
             </li>
             <li
               css={css`

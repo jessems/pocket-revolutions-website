@@ -16,7 +16,6 @@ const Header = ({ siteTitle }) => {
         flex-shrink: 0;
         background: none;
         padding: 20px 0;
-        background-image: linear-gradient(to right, #C7017F, #153D8A)
       `}
     >
       <Container noVerticalPadding>

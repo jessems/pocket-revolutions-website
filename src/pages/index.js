@@ -186,7 +186,7 @@ export default function Index({ data: { site, allMdx } }) {
           title="Digitalising the ping test — an age-old method of catching counterfeit coins" 
           appName="Pingcoin"
           description="Experienced coin collectors are often able to determine if a coin is authentic gold or silver by listening to the sound it produces upon a gentle strike.
-          Pingcoin brings this analog method into the digital realm, and in doing so enhances its accuracy and protects anyone with a smartphone from getting fooled by a counterfeit coin."
+          Pingcoin brings this analog method into the digital realm, and in doing so enhances its accuracy and equips anyone with a smartphone with a counterfeit detection device."
           industry="Numismatics"
           formFactor="Mobile App"
           userType="Business to Consumer"
