@@ -7,6 +7,7 @@ class Title extends Component {
       <div id={this.props.id}>
         <h1
           css={css`
+            font-family: 'Cairo', 'sans-serif';
             font-size: 30px;
             font-weight: 300;
             display: inline-block;

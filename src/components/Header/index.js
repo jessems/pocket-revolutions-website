@@ -18,7 +18,7 @@ const Header = ({ siteTitle, location }) => {
 
   // theme.blogPageHeaderGradient = (path) => 'linear-gradient(102.18deg, #C7017F -17.52%, #153D8A 143.92%)'
 
-  let dynamicStyle = (path) => (path.includes('/blog') ? css`background: linear-gradient(102.18deg, #C7017F -17.52%, #153D8A 143.92%)` : '');
+    let dynamicStyle = (path) => (path != undefined && path.includes('/blog') ? css`background: linear-gradient(102.18deg, #C7017F -17.52%, #153D8A 143.92%)` : '');
   
 
   return (

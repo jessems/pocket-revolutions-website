@@ -57,6 +57,7 @@ const Hero = () => {
             <h1
               css={css`
                 color: ${theme.colors.white};
+                font-family: 'Cairo', 'sans-serif';
                 font-weight: 600;
                 position: relative;
                 z-index: 5;
@@ -135,7 +136,8 @@ const Description = styled.p`
 `
 
 const SubHeading = styled.h2`
-  font-weight: 700; 
+  font-family: 'Cairo', 'sans-serif';
+  font-weight: 600; 
   color: #153D8A; 
   font-size: 24px;
   margin: 0;
@@ -295,6 +297,7 @@ export default function Index({ data: { site, allMdx }, location }) {
             >
               <h2
                 css={css({
+                  fontFamily: 'Cairo',
                   marginBottom: rhythm(0.3),
                   marginTop: 0,
                   transition: 'all 150ms ease',

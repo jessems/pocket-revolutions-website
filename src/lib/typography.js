@@ -18,12 +18,12 @@ import '../fonts/fonts.css'
 // }
 
 export const fonts = {
-  regular: 'Cairo',
-  regularItalic: 'Cairo',
-  semibold: 'Cairo',
-  semiboldItalic: 'Cairo',
-  bold: 'Cairo',
-  boldItalic: 'Cairo',
+  regular: 'Lato',
+  regularItalic: 'Lato',
+  semibold: 'Lato',
+  semiboldItalic: 'Lato',
+  bold: 'Lato',
+  boldItalic: 'Lato',
 }
 
 

@@ -59,6 +59,7 @@ class PortfolioCard extends Component {
         >
           <h2
             css={css`
+              font-family: 'Cairo', 'sans-serif';
               font-size: 24px;
               font-weight: 600;
               color: ${this.props.titleColor};
