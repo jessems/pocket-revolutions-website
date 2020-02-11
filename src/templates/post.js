@@ -14,6 +14,7 @@ import { bpMaxSM } from '../lib/breakpoints'
 export default function Post({
   data: { site, mdx },
   pageContext: { next, prev },
+  location
 }) {
   const author = mdx.frontmatter.author || config.author
   const date = mdx.frontmatter.date
@@ -21,7 +22,7 @@ export default function Post({
   const banner = mdx.frontmatter.banner
 
   return (
-    <Layout site={site} frontmatter={mdx.frontmatter}>
+    <Layout site={site} frontmatter={mdx.frontmatter} location={location}>
       <SEO frontmatter={mdx.frontmatter} isBlogPost />
       <article
         css={css`

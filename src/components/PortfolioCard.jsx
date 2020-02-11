@@ -12,6 +12,8 @@ class PortfolioCard extends Component {
   tagsColorMapping = {
     'Product Design': { color: '#7f0909', 'background-color': '#ffc8c8' },
     'Product Development': { color: '#091d7f', 'background-color': '#c8d1ff' },
+    'Product Strategy': { color: '#091d7f', 'background-color': '#c8d1ff' },
+    Digitalization: { color: '#D15AA6', 'background-color': '#FDC7F1' },
     Other: 'brown',
   }
   render() {
@@ -81,8 +83,8 @@ class PortfolioCard extends Component {
               margin-top: 16px;
               font-size: 18px;
               font-weight: 300;
-              color: #353535;
-              font-family: 'Open Sans';
+              color: #171717;
+              font-family: 'Lato';
             `}
           >
             {this.props.description}

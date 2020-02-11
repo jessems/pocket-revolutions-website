@@ -15,7 +15,7 @@ const Hero = () => {
       css={css`
         color: ${theme.colors.white};
         width: 100%;
-        background: ${theme.colors.primary};
+        background: linear-gradient(102.18deg, #C7017F -17.52%, #153D8A 143.92%);
         padding: 20px 0 30px 0;
         display: flex;
       `}
@@ -52,12 +52,15 @@ const Hero = () => {
 const Description = styled.p`
   margin-bottom: 10px;
   display: inline-block;
+  font-family: 'Lato';
 `
 
-export default function Index({ data: { site, allMdx } }) {
+export default function Index({ data: { site, allMdx }, location }) {
   const theme = useTheme()
+  console.log("\\\\\\\ ", location)
   return (
-    <Layout site={site}>
+    
+    <Layout site={site} location={location}>
       <Hero />
       <Container
         css={css`
@@ -118,7 +121,7 @@ export const pageQuery = graphql`
     allMdx(
       limit: 5
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { published: { ne: false } } }
+      filter: { frontmatter: { published: { ne: false }, contentType: {eq : "post"} } }
     ) {
       edges {
         node {

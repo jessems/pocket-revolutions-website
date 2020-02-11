@@ -139,6 +139,8 @@ export default ({
   children,
   noFooter,
   noSubscribeForm,
+  location,
+  path
 }) => {
   const initializeTheme = () => {
     if (typeof window !== 'undefined') {
@@ -182,15 +184,7 @@ export default ({
       <Fragment>
         <Global styles={reset()} />
         <Global styles={getGlobalStyles(theme)} />
-        <div
-          css={css`
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            min-height: 100vh;
-          `}
-        >
-          <Helmet
+        <Helmet
             title={config.siteTitle}
             meta={[
               { name: 'description', content: description },
@@ -200,16 +194,26 @@ export default ({
             <html lang="en" />
             <noscript>This site runs best with JavaScript enabled.</noscript>
           </Helmet>
-          <Header />
-          <MDXProvider components={mdxComponents}>
-            <Fragment>{children}</Fragment>
-          </MDXProvider>
-          {!noFooter && (
-            <Footer
-              author={site.siteMetadata.author.name}
-              noSubscribeForm={noSubscribeForm}
-            />
-          )}
+        <div
+          css={css`
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-height: 100vh;
+          `}
+        >
+          <div css={css`flex: 1;`}>
+            <Header location={location}/>
+            <MDXProvider components={mdxComponents}>
+              <Fragment>{children}</Fragment>
+            </MDXProvider>
+            {!noFooter && (
+              <Footer
+                author={site.siteMetadata.author.name}
+                noSubscribeForm={noSubscribeForm}
+              />
+            )}
+        </div>
         </div>
       </Fragment>
     </ThemeProvider>

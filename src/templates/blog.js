@@ -11,6 +11,7 @@ import { bpMaxSM, bpMaxMD } from '../lib/breakpoints'
 const Blog = ({
   data: { site, allMdx },
   pageContext: { pagination, categories },
+  location
 }) => {
   const { page, nextPagePath, previousPagePath } = pagination
 
@@ -19,7 +20,7 @@ const Blog = ({
     .filter(post => post !== undefined)
 
   return (
-    <Layout site={site}>
+    <Layout site={site} location={location}>
       <SEO />
       <Container noVerticalPadding>
         {posts.map(({ node: post }) => (

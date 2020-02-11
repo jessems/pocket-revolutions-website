@@ -15,7 +15,7 @@ import AxovaBackground from 'components/axova-background.svg'
 import PingcoinBackground from 'components/pingcoin-background.svg'
 import HeroImage from 'components/hero-image.png'
 import ContactUs from 'components/ContactUs'
-import { bpMaxSM } from '../lib/breakpoints'
+import { bpMaxSM, bpMinLG } from '../lib/breakpoints'
 import HeroBackground from 'components/assets/hero_background.svg'
 
 
@@ -72,7 +72,7 @@ const Hero = () => {
                 color: ${theme.colors.white};
                 font-weight: 200;
                 position: relative;
-                font-family: 'Open Sans';
+                font-family: 'Lato';
                 font-size: 24px;
                 z-index: 5;
                 line-height: 1.5;
@@ -131,7 +131,7 @@ const Hero = () => {
 const Description = styled.p`
   margin-bottom: 10px;
   display: inline-block;
-  font-family: 'Open Sans';
+  font-family: 'Lato';
 `
 
 const SubHeading = styled.h2`
@@ -139,34 +139,42 @@ const SubHeading = styled.h2`
   color: #153D8A; 
   font-size: 24px;
   margin: 0;
+  margin-top: 16px;
   margin-bottom: 32px;
 `
 
 const Paragraph = styled.p`
   font-size: 18px;
-  font-family: 'Open Sans';
+  font-family: 'Lato';
   font-weight: 400;
 `
 
 
 
-export default function Index({ data: { site, allMdx } }) {
+export default function Index({ data: { site, allMdx }, location }) {
   const theme = useTheme()
   let backgroundMapping = {
     axova: `url(${AxovaBackground})`,
     pingcoin: `url(${PingcoinBackground})`
   }
   return (
-    <Layout site={site}>
+    <Layout site={site} location={location}>
       <Hero />
       <Container
         css={css`
           padding-bottom: 0;
+          ${bpMinLG} {
+            padding-top: 0;
+          }
         `}
       >
         
 
-        <Title text="Portfolio" id="portfolio"/>
+        <Title text="Portfolio" id="portfolio" css={css`
+          ${bpMinLG} {
+            margin-top: 0;
+          }
+        `}/>
         <PortfolioCard 
           title="Reducing phone support with a self-serve tracker app" 
           appName="My Axova"
@@ -174,7 +182,7 @@ export default function Index({ data: { site, allMdx } }) {
           industry="Energy Sector"
           formFactor="Mobile App"
           userType="Business to Client"
-          tags={['Product Design', 'Product Development', 'Other']}
+          tags={['Product Design', 'Product Development', 'Digitalization', 'Product Strategy']}
           borderColor="rgba(13, 94, 33, 0.05);"
           backgroundColor="#F7FCF7"
           titleColor="#0E6123"
@@ -206,7 +214,7 @@ export default function Index({ data: { site, allMdx } }) {
             display: flex; 
             font-weight: 400; 
             justify-content: flex-start;
-            font-family: 'Open Sans';
+            font-family: 'Lato';
           `}>
           <div css={css`
             flex-basis: 66%;
@@ -215,31 +223,32 @@ export default function Index({ data: { site, allMdx } }) {
               flex-basis: 100%;
             }
           `}>
-            <SubHeading>Helping you to go from an idea to a successful application</SubHeading>
+            <SubHeading>Helping you go from idea to a successful app</SubHeading>
 
-            <Paragraph>If you want to build an app, you typically have several options. If you've got an in-house team you can develop the app internally. If you don't, you can work with an external agency.</Paragraph>
+            <Paragraph>If you're reading this then chances are you have an idea you want to turn into a software application.</Paragraph>
+
+            <Paragraph>That's fantastic and we here at Pocket Revolutions are excited for you. </Paragraph>
+              
+            <Paragraph>Innovation starts with an idea and we want to help bring about a world where it's easier to turn those ideas into successful applications.</Paragraph>
+
+            <SubHeading>The risks involved with creating apps</SubHeading>
+
+            <Paragraph>That being said, going from idea to app, comes with certain challenges. We believe the most helpful way to think of those challenges is to think of them in terms of risks. </Paragraph>
             
-            <Paragraph>We are primarily interested in helping you achieve your business outcomes. If software is the right tool for that, then by all means, let's build it.
-            But sometimes software isn't the right tool. </Paragraph>
+            <Paragraph>Successful digital products tend to be Valuable, Viable, Feasible and Usable. The qualities are essential to success and, as such, also represent 4 distinct types of risks.</Paragraph>
 
-            <Paragraph>Apps can be wonderful, sexy and even life-changing. Who doesn't rely on the magic of an app like Google Maps these days.</Paragraph>
+            <Paragraph>Any product team developing a product assumes (implicitly or explicitly) it will somehow mitigate these four risks.</Paragraph>
 
-            <div css={css`height: 32px;`}></div>
-            <SubHeading>Reduce the risks involved in developing a digital product</SubHeading>
+            <Paragraph>If they fail, the product fails. It's that simple.</Paragraph>
 
-            <Paragraph>But software development is a risky endeavour for any business.</Paragraph>
-            <ul>
-                  <li>There is the financial risk involved in financing the development of the application –– a price tag that often remains unknown until late in the project.</li>
-                  <li>There is the market risk for B2C and B2B apps –– whether or not they will get traction and prove valuable to users</li>
-                  <li>There are business risks –– whether the app will be able to sustain itself</li>
-                  <li> There are technical risks -- </li>
-                  <li>There are usability risks</li>
-            </ul>
+            <SubHeading>High-Precision Thinking & Methodical De-Risking</SubHeading>
 
-            <SubHeading>Quality</SubHeading>
+            <Paragraph>Our approach hinges on being being honest and explicit about the risks involved in the project. We do this by externalizing our thinking and identifying our assumptions. We make our risks explicit. </Paragraph>
             
+            <Paragraph>After making the risks explicit, we try to methodically de-risk them by coming up with hypotheses and running experiments designed to validate or invalidate those hypotheses.</Paragraph>
+
+            <Paragraph>This way we are able to methodically de-risk our product initiative. </Paragraph>
             
-            <p>It should come as not suprise that to successfully navigate these risks you need a partner that understands these domains.</p>
           </div>
           <div css={css`
             flex-basis: 33%;
@@ -260,7 +269,7 @@ export default function Index({ data: { site, allMdx } }) {
             />
             <SmallAsymmetricallyRoundedCard 
             title="What we offer" 
-            text="Full-service digital transformation to specific competencies"
+            text="Full-service digital transformation & specific competencies"
             color="#00C2FF"
             />
           </div>

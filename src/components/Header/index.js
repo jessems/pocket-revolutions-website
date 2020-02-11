@@ -1,20 +1,32 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import { jsx, css } from '@emotion/core'
+import { styled } from '@emotion/styled'
 import { useTheme } from '../Theming'
 import { bpMaxSM } from '../../lib/breakpoints'
 import MobileMenu from './MobileMenu'
 import Links from './Links'
 import Container from '../Container'
+import { Router, Link } from "@reach/router"
 
-const Header = ({ siteTitle }) => {
+const Header = ({ siteTitle, location }) => {
+
+  const path = location?.pathname
+  console.log(">>>>> location ", path)
+  console.log(">>>>>", siteTitle)
   const theme = useTheme()
+
+  // theme.blogPageHeaderGradient = (path) => 'linear-gradient(102.18deg, #C7017F -17.52%, #153D8A 143.92%)'
+
+  let dynamicStyle = (path) => (path.includes('/blog') ? css`background: linear-gradient(102.18deg, #C7017F -17.52%, #153D8A 143.92%)` : '');
+  
+
   return (
     <header
       css={css`
         width: 100%;
         flex-shrink: 0;
-        background: none;
+        ${dynamicStyle(path)};
         padding: 20px 0;
       `}
     >

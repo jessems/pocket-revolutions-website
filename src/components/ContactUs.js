@@ -43,7 +43,7 @@ const Input = styled.input`
   opacity: 0.8;
   width: 100%;
   height: 60px;
-  font-family: 'Open Sans';
+  font-family: 'Lato';
 `
 
 
@@ -66,7 +66,7 @@ const Select = styled.select`
     width: 100%;
     height: 60px;
     margin: 5px 0px 0px 0px;
-    font-family: 'Open Sans';
+    font-family: 'Lato';
 `
   
 
@@ -141,7 +141,7 @@ class ContactUs extends React.Component {
                     font-size: 20px;
                     line-height: 150%;
                     color: #E6E0FF;
-                    font-family: 'Open Sans';
+                    font-family: 'Lato';
                     opacity: 0.8;
                   `}>Get in touch with us here and we will get back to you shortly.</p>
                 </div>

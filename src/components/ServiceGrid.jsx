@@ -50,7 +50,7 @@ const ServiceGridColDescription = styled.p`
   font-size: 14px;
   line-height: 180%;
   letter-spacing: 0.04em;
-  font-family: 'Open Sans';
+  font-family: 'Lato';
 `
 
 class ServiceGrid extends Component {

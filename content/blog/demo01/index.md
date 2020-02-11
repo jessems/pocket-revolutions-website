@@ -1,5 +1,5 @@
 ---
-slug: demo-01
+slug: blog/demo-01
 date: 2017-01-01
 title: 'Sample blog post'
 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed molestie leo ut sodales porta. Vivamus pharetra risus ac fermentum faucibus. Nam in sodales ex.'
