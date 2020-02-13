@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 import { css } from '@emotion/core'
 import axovaDisplay from './axova_display.png'
 import pingcoinDisplay from './pingcoin_display.png'
@@ -10,10 +9,14 @@ import { bpMaxSM } from '../lib/breakpoints'
 
 class PortfolioCard extends Component {
   tagsColorMapping = {
-    'Product Design': { color: '#7f0909', 'background-color': '#ffc8c8' },
-    'Product Development': { color: '#091d7f', 'background-color': '#c8d1ff' },
-    'Product Strategy': { color: '#091d7f', 'background-color': '#c8d1ff' },
-    Digitalization: { color: '#D15AA6', 'background-color': '#FDC7F1' },
+    'Product Discovery': { color: '#7F0909', 'background-color': '#FFC8C8' }, // Red
+    'Product Design': { color: '#091D7F', 'background-color': '#C8D1FF' }, // Blue
+    'Product Development': { color: '#091d7f', 'background-color': '#D8F4DB' }, // Green
+    'Product Strategy': { color: '#9A3174', 'background-color': '#FFD4F6' }, // Pink
+    'User Research': { color: '#5F3A04', 'background-color': '#EFF4B1' }, // Yellow
+    Digitalisation: { color: '#5F3A04', 'background-color': '#FFE6C1' }, // Orange
+    'To be defined': { color: '#044E5F', 'background-color': '#C1F4FF' }, // Baby blue
+    'To be defined 2': { color: '#3C045F', 'background-color': '#E8C1FF' }, // Baby blue
     Other: 'brown',
   }
   render() {
@@ -202,6 +205,7 @@ class PortfolioCard extends Component {
                       `background-color`
                     ]};
                     border-radius: 16px;
+                    opacity: 0.8;
                     font-size: 10px;
                     color: ${this.tagsColorMapping[value][`color`]};
                     font-weight: 500;

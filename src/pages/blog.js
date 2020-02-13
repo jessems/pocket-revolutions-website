@@ -57,7 +57,7 @@ const Description = styled.p`
 
 export default function Index({ data: { site, allMdx }, location }) {
   const theme = useTheme()
-  console.log("\\\\\\\ ", location)
+  console.log(">>>>", location)
   return (
     
     <Layout site={site} location={location}>

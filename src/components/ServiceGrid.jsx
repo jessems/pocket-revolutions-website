@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
-import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
 import DigitalTransformationAuditIcon from './assets/digital_transformation_audit_icon.svg'
 import UserResearchIcon from './assets/user_research_icon.svg'
 import ProductStrategyIcon from './assets/product_strategy_icon.svg'
+import ProductDiscoveryIcon from './assets/product_discovery_icon.svg'
 import InnovationSessionsIcon from './assets/innovation_sessions_icon.svg'
 import DesignAndDevelopmentIcon from './assets/design_and_development_icon.svg'
-import { getDefaultLibFileName } from 'typescript'
-import { bpMaxSM, bpMaxMD, bpMaxXS } from '../lib/breakpoints'
+import { bpMaxSM, bpMaxXS } from '../lib/breakpoints'
 
 const ServiceGridRow = styled.div`
   display: flex;
@@ -59,13 +58,14 @@ class ServiceGrid extends Component {
       <div css={css``}>
         <ServiceGridRow>
           <ServiceGridCol>
-            <DigitalTransformationAuditIcon />
-            <ServiceGridColTitle>Digitalization</ServiceGridColTitle>
+            <ProductStrategyIcon />
+            <ServiceGridColTitle>Product Strategy</ServiceGridColTitle>
             <ServiceGridColDescription>
-              Uncover how you can leverage technology to streamline your
-              business and gain a competitive advantage?
+              Making sure you and your team and running in the same direction,
+              and making sure it's the right one.
             </ServiceGridColDescription>
           </ServiceGridCol>
+
           <ServiceGridCol>
             <UserResearchIcon />
             <ServiceGridColTitle>User Research</ServiceGridColTitle>
@@ -90,11 +90,18 @@ class ServiceGrid extends Component {
             </ServiceGridColDescription>
           </ServiceGridCol>
           <ServiceGridCol>
-            <ProductStrategyIcon />
-            <ServiceGridColTitle>Product Strategy</ServiceGridColTitle>
+            <ProductDiscoveryIcon />
+            <ServiceGridColTitle>Product Discovery</ServiceGridColTitle>
             <ServiceGridColDescription>
-              Making sure you and your team and running in the same direction,
-              and making sure it's the right one.
+              Finding new opportunities for successful products.
+            </ServiceGridColDescription>
+          </ServiceGridCol>
+          <ServiceGridCol>
+            <DigitalTransformationAuditIcon />
+            <ServiceGridColTitle>Digitalization</ServiceGridColTitle>
+            <ServiceGridColDescription>
+              Uncover how you can leverage technology to streamline your
+              business and gain a competitive advantage?
             </ServiceGridColDescription>
           </ServiceGridCol>
         </ServiceGridRow>

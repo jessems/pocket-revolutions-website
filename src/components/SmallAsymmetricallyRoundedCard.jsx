@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { css } from '@emotion/core'
-import { bpMaxSM } from '../lib/breakpoints'
 
 class SmallAsymmetricallyRoundedCard extends Component {
   render() {

@@ -49,6 +49,14 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [
+          'gatsby-remark-responsive-iframe',
+        ]
+      }
+    },
+    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: ['.mdx', '.md', '.markdown'],
@@ -63,6 +71,7 @@ module.exports = {
         ],
       },
     },
+    
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

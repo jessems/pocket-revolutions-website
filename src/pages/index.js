@@ -89,7 +89,7 @@ const Hero = () => {
             display: none;
           }
           `}>
-            <img src={HeroImage} css={css`
+            <img src={HeroImage} alt="hero" css={css`
             margin-top: -64px;
             
             `}/>
@@ -184,7 +184,7 @@ export default function Index({ data: { site, allMdx }, location }) {
           industry="Energy Sector"
           formFactor="Mobile App"
           userType="Business to Client"
-          tags={['Product Design', 'Product Development', 'Digitalization', 'Product Strategy']}
+          tags={['Product Design', 'Product Development', 'Digitalisation', 'Product Strategy']}
           borderColor="rgba(13, 94, 33, 0.05);"
           backgroundColor="#F7FCF7"
           titleColor="#0E6123"
@@ -200,7 +200,7 @@ export default function Index({ data: { site, allMdx }, location }) {
           industry="Numismatics"
           formFactor="Mobile App"
           userType="Business to Consumer"
-          tags={['Product Design', 'Product Development', 'Other']}
+          tags={['Product Discovery', 'Product Design', 'Product Development', 'Digitalisation', 'Product Strategy', 'User Research']}
           borderColor="#F3E6FB"
           backgroundColor="#F8F5FA"
           titleColor="#493289"

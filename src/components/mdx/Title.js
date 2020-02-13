@@ -1,6 +1,7 @@
 import styled from '@emotion/styled'
 
 export default styled.h1`
+  font-family: 'Cairo';
   font-size: 24px;
   font-weight: 400;
   line-height: 1.1;

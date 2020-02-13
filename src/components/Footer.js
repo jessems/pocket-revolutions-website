@@ -1,7 +1,6 @@
 import React from 'react'
 import { css } from '@emotion/core'
 import { bpMaxSM, bpMaxMD, bpMaxXS } from '../lib/breakpoints'
-import SubscribeForm from './Forms/Subscribe'
 import { Twitter, LinkedIn } from './Social'
 import Container from './Container'
 import PocketRevolutionsLogo from './assets/PocketRevolutions_NEG.svg'

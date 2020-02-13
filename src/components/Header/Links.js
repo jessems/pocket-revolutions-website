@@ -2,13 +2,11 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { css } from '@emotion/core'
-import { useTheme } from '../Theming'
-import ThemeToggler from './ThemeToggler'
 import PocketRevolutionsLogo from '../assets/PocketRevolutions_NEG.svg'
 import { bpMaxSM } from '../../lib/breakpoints'
 
 export default () => {
-  const theme = useTheme()
+  // const theme = useTheme()
   // const StyledLinked = styled(props => <Link {...props} />)`
   //   opacity: 0.9;
   // `

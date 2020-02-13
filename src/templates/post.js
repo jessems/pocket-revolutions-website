@@ -26,13 +26,17 @@ export default function Post({
       <SEO frontmatter={mdx.frontmatter} isBlogPost />
       <article
         css={css`
-          width: 100%;
+          width: 790px;
           display: flex;
+          margin-left: auto;
+          margin-right: auto;
         `}
       >
         <Container>
           <h1
             css={css`
+              font-family: 'Cairo';
+              font-weight: 500;
               text-align: center;
               margin-bottom: 20px;
             `}
