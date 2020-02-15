@@ -1,4 +1,6 @@
 const colors = {
+  prPurple: '#C7017F',
+  prBlue: '#153D8A',
   black: '#131415',
   white: '#fff',
   gray: '#fafafa',

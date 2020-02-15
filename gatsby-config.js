@@ -49,14 +49,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-transformer-remark',
-      options: {
-        plugins: [
-          'gatsby-remark-responsive-iframe',
-        ]
-      }
-    },
-    {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: ['.mdx', '.md', '.markdown'],
@@ -67,6 +59,19 @@ module.exports = {
               backgroundColor: '#fafafa',
               maxWidth: 1035,
             },
+          },
+          {
+            resolve: `gatsby-remark-table-of-contents`,
+            options: {
+              exclude: "Table of Contents",
+              tight: false,
+              fromHeading: 1,
+              toHeading: 6
+            },
+          },
+          {
+            resolve: `gatsby-remark-figure-caption`,
+            options: {figureClassName: 'md-figure'},
           },
         ],
       },
